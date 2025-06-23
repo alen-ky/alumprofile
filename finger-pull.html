@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Pull Handles</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-strip">
+            <div class="product-card" data-product="g9">
+                <img src="https://www.cronosdesign.com/i/g95.jpg" alt="G9" class="product-image">
+                <p class="product-name">G9</p>
+            </div>
+
+            <div class="product-card" data-product="g11">
+                <img src="https://www.cronosdesign.com/i/g11cover.jpg" alt="G11" class="product-image">
+                <p class="product-name">G11</p>
+            </div>
+
+            <div class="product-card" data-product="g12">
+                <img src="https://www.cronosdesign.com/i/g12Cover1.png" alt="g12"
+                    class="product-image">
+                <p class="product-name">G12</p>
+            </div>
+
+            <div class="product-card" data-product="vibo">
+                <img src="https://www.cronosdesign.com/i/viboCover.jpg" alt="Vibo" class="product-image">
+                <p class="product-name">Vibo</p>
+            </div>
+
+            <div class="product-card" data-product="6113b">
+                <img src="https://www.cronosdesign.com/i/6113bCover1.png" alt="6113B" class="product-image">
+                <p class="product-name">6113B</p>
+            </div>
+        </div>
+
+        <div id="product-details" class="product-details">
+            <div class="details-content">
+                <div class="gallery-wrapper">
+                    <button class="gallery-arrow left">&#8592;</button>
+                    <div class="details-gallery"></div>
+                    <button class="gallery-arrow right">&#8594;</button>
+                    <div class="gallery-dots"></div>
+                    <div class="finishes-section" id="finishes-section">
+                        <div class="finishes-header">
+                            <h3><strong>Available Finishes</strong></h3>
+                            <ul class="finishes-desc">
+                                <li>Powder coated finishes available only with handle borings in <a href="#"
+                                        target="_blank">RAL Colors</a>.</li>
+                                <li>Other finish options available upon request.</li>
+                            </ul>
+                        </div>
+                        <div class="finish-grid">
+                            <div class="finish-item">
+                                <div class="finish-color black"></div>
+                                <div class="finish-label">Black</div>
+                                <div class="finish-type">Brushed/Matte</div>
+                            </div>
+                            <div class="finish-item">
+                                <div class="finish-color brown"></div>
+                                <div class="finish-label">Brown</div>
+                                <div class="finish-type">Brushed/Matte</div>
+                            </div>
+                            <div class="finish-item">
+                                <div class="finish-color aluminum"></div>
+                                <div class="finish-label">Aluminum</div>
+                                <div class="finish-type">Brushed/Matte</div>
+                            </div>
+                            <div class="finish-item">
+                                <div class="finish-color steel"></div>
+                                <div class="finish-label">Steel</div>
+                                <div class="finish-type">Brushed/Matte</div>
+                            </div>
+                            <div class="finish-item">
+                                <div class="finish-color gold"></div>
+                                <div class="finish-label">Gold</div>
+                                <div class="finish-type">Brushed/Matte</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-text">
+                    <h2 class="details-title" id="details-title"></h2>
+                    <div class="details-description" id="details-description"></div>
+                    <ul class="details-features" id="details-features"></ul>
+                    <img id="details-diagram" class="details-diagram" src="" alt="Diagram" />
+                </div>
+            </div>
+            <div id="milling-types" class="milling-types-section"></div>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            'g9': {
+                title: 'G9',
+                diagram: 'https://static.tildacdn.com/tild3830-6665-4262-b132-636233373938/g9-handle.png',
+                image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDUwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZjhmOWZhIi8+CjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNlOWVjZWYiIHN0cm9rZT0iIzZjNzU3ZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjI1MCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmM3NTdkIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiPkFWRU5UT1MgSEYgVG9wPC90ZXh0Pgo8L3N2Zz4K',
+                gallery: [
+                    'https://www.cronosdesign.com/i/g95.jpg',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/g93.jpg&w=696',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/g9HandleCoverHighRes.jpeg&w=696',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/g91.jpg&w=696'
+                ],
+                specs: [
+                    'Available cut to size with anodized ends.',
+                    'Mounting with screws or with double-sided tape.',
+                    'Milling option available in Type 1.',
+                    'Flush mount door fabrication can be provided upon request (maximum length 6").'
+                ],
+                milling: [
+                    { label: 'Type 1', src: 'https://www.cronosdesign.com/i/millilngType1.png' }
+                ]
+            },
+            'g11': {
+                title: 'G11',
+                diagram: 'https://static.tildacdn.com/tild6164-3734-4233-b835-613637326533/G11.png',
+                gallery: [
+                    'https://www.cronosdesign.com/i/g11Black.jpg',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/G11Gold.jpg&w=1244',
+                    'https://www.cronosdesign.com/i/G11-detal.jpg',
+                    'https://www.cronosdesign.com/i/g117.jpg'
+                ],
+                specs: [
+                    'Available cut to size with anodized ends.',
+                    'Mounting with screws or with double-sided tape.',
+                    'Milling option available in Type 5, 6, 7, 9.',
+                    'Flush mount door fabrication can be provided upon request (maximum length 6").'
+                ],
+                milling: [
+                    { label: 'Type 5', src: 'https://www.cronosdesign.com/i/millingType5.png' },
+                    { label: 'Type 6', src: 'https://www.cronosdesign.com/i/millingType6.png' },
+                    { label: 'Type 7', src: 'https://www.cronosdesign.com/i/millingType7.png' },
+                    { label: 'Type 9', src: 'https://www.cronosdesign.com/i/millingType9_2.png' }
+                ]
+            },
+            'g12': {
+                title: 'G12',
+                diagram: 'https://static.tildacdn.com/tild3036-6362-4061-b433-313661346236/G12.png',
+                gallery: [
+                    'https://www.cronosdesign.com/i/g1241.jpg',
+                    'https://www.cronosdesign.com/i/g1212.jpg',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/g1211.jpg&w=1244'
+                ],
+                specs: [
+                    'Available cut to size with anodized ends.',
+                    'Mounting with screws or with double-sided tape.',
+                    'Milling option available in Type 1, 8.',
+                    'Flush mount door fabrication can be provided upon request (maximum length 6").'
+                ],
+                milling: [
+                    { label: 'Type 1', src: 'https://www.cronosdesign.com/i/millilngType1.png' },
+                    { label: 'Type 8', src: 'https://www.cronosdesign.com/i/millingType8.png' }
+                ]
+            },
+            'vibo': {
+                title: 'Vibo',
+                diagram: 'https://static.tildacdn.com/tild6362-6437-4162-a365-303465376162/Vibo.png',
+                gallery: [
+                    'https://www.cronosdesign.com/i/vibo2.jpg',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/vibo1.jpg&w=1244',
+                    'https://www.cronosdesign.com/i/vibo3.jpg',
+                    'https://www.cronosdesign.com/i/vibo4.jpg'
+                ],
+                specs: [
+                    'Available cut to size with anodized ends.',
+                    'Mounting with double-sided tape.',
+                    'Milling option available in Type 1, 2, 3, 4.',
+                    'Other finish options available upon request.'
+                ],
+                milling: [
+                    { label: 'Type 1', src: 'https://www.cronosdesign.com/i/millilngType1.png' },
+                    { label: 'Type 2', src: 'https://www.cronosdesign.com/i/millingType2.png' },
+                    { label: 'Type 3', src: 'https://www.cronosdesign.com/i/millingType3.png' },
+                    { label: 'Type 4', src: 'https://www.cronosdesign.com/i/millingType4.png' }
+                ]
+            },
+            '6113b': {
+                title: '6113B',
+                diagram: 'https://www.cronosdesign.com/i/6113BDiagram1.jpeg',
+                gallery: [
+                    'https://www.cronosdesign.com/i/6113bCover1.png',
+                ],
+                specs: [
+                    'Available cut to size.',
+                    'Mounting with screws or with double-sided tape.',
+                    'Milling option available in Straight Cut only.',
+                    'Available only with raw ends.'
+                ],
+                milling: [],
+                finishes: [
+                    {
+                        label: 'Matte Black',
+                        colorClass: 'black',
+                        type: ''
+                    },
+                    {
+                        label: 'Natural Aluminum',
+                        colorClass: 'aluminum',
+                        type: ''
+                    },
+                    {
+                        label: 'Brushed Stainless Steel',
+                        colorClass: '',
+                        type: '',
+                        image: 'https://www.cronosdesign.com/i/profiles/colors/brushed-bronze-square.png'
+                    }
+                ]
+            },
+        };
+
+        let currentIndex = 0;
+        let gallerySize = 0;
+
+        function goToSlide(idx) {
+            const galleryContainer = document.querySelector('.details-gallery');
+            const dots = document.querySelectorAll('.gallery-dot');
+
+            if (idx < 0) idx = gallerySize - 1;
+            if (idx >= gallerySize) idx = 0;
+
+            currentIndex = idx;
+            const slideWidth = galleryContainer.querySelector('.gallery-img')?.clientWidth || galleryContainer.offsetWidth;
+            galleryContainer.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
+
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+
+        function updateArrowPosition() {
+            const detailsGallery = document.querySelector('.details-gallery');
+            const leftArrow = document.querySelector('.gallery-arrow.left');
+            const rightArrow = document.querySelector('.gallery-arrow.right');
+            if (!detailsGallery || !leftArrow || !rightArrow) return;
+            const galleryRect = detailsGallery.getBoundingClientRect();
+            const wrapper = detailsGallery.closest('.gallery-wrapper');
+            const wrapperRect = wrapper ? wrapper.getBoundingClientRect() : { top: 0 };
+            const top = galleryRect.top - wrapperRect.top + detailsGallery.clientHeight / 2;
+            leftArrow.style.top = `${top}px`;
+            rightArrow.style.top = `${top}px`;
+        }
+
+        function showProductDetails(productId) {
+            const product = products[productId];
+
+            document.getElementById('details-title').textContent = product.title;
+            document.getElementById('details-description').textContent = product.description;
+
+            const featureUL = document.getElementById('details-features');
+            featureUL.innerHTML = '';
+            product.specs.forEach(txt => {
+                const li = document.createElement('li');
+                li.textContent = txt;
+                featureUL.appendChild(li);
+            });
+
+            const diagramImg = document.getElementById('details-diagram');
+            if (product.diagram) {
+                diagramImg.src = product.diagram;
+                diagramImg.style.display = 'block';
+            } else {
+                diagramImg.style.display = 'none';
+            }
+
+            const gallery = document.querySelector('.details-gallery');
+            gallery.innerHTML = '';                 // clear previous images
+
+            product.gallery.forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = product.title;
+                img.className = 'gallery-img';
+                gallery.appendChild(img);
+            });
+
+            const dotWrap = document.querySelector('.gallery-dots');
+            dotWrap.innerHTML = '';
+            product.gallery.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotWrap.appendChild(dot);
+            });
+            currentIndex = 0;
+            gallerySize = product.gallery.length;
+            goToSlide(0); // ensure first image aligned
+
+            document.querySelectorAll('.product-card').forEach(card =>
+                card.classList.remove('active')
+            );
+            document.querySelector(`[data-product="${productId}"]`)
+                .classList.add('active');
+
+            const millingWrap = document.getElementById('milling-types');
+            millingWrap.innerHTML = '';
+
+            if (product.milling && product.milling.length > 0) {
+                const title = document.createElement('h3');
+                title.className = 'milling-title';
+                title.textContent = 'Milling Types';
+                millingWrap.appendChild(title);
+
+                const grid = document.createElement('div');
+                grid.className = 'milling-grid';
+
+                product.milling.forEach((item) => {
+                    const typeDiv = document.createElement('div');
+                    typeDiv.className = 'milling-type';
+
+                    const label = document.createElement('h4');
+                    label.textContent = item.label;
+
+                    const img = document.createElement('img');
+                    img.src = item.src;
+                    img.alt = item.label;
+
+                    typeDiv.appendChild(label);
+                    typeDiv.appendChild(img);
+                    grid.appendChild(typeDiv);
+                });
+
+                millingWrap.appendChild(grid);
+            }
+
+            // Update finishes grid for all products
+            const finishesSection = document.getElementById('finishes-section');
+            const finishGrid = finishesSection.querySelector('.finish-grid');
+            if (product.finishes) {
+                finishGrid.innerHTML = '';
+                product.finishes.forEach(finish => {
+                    const item = document.createElement('div');
+                    item.className = 'finish-item';
+
+                    const color = document.createElement('div');
+                    color.className = 'finish-color ' + finish.colorClass;
+                    if (finish.image) {
+                        color.style.backgroundImage = `url('${finish.image}')`;
+                    }
+
+                    const label = document.createElement('div');
+                    label.className = 'finish-label';
+                    label.textContent = finish.label;
+
+                    const type = document.createElement('div');
+                    type.className = 'finish-type';
+                    type.textContent = finish.type;
+
+                    item.appendChild(color);
+                    item.appendChild(label);
+                    item.appendChild(type);
+
+                    finishGrid.appendChild(item);
+                });
+            } else {
+                finishGrid.innerHTML = `
+                    <div class="finish-item">
+                        <div class="finish-color black"></div>
+                        <div class="finish-label">Black</div>
+                        <div class="finish-type">Brushed/Matte</div>
+                    </div>
+                    <div class="finish-item">
+                        <div class="finish-color brown"></div>
+                        <div class="finish-label">Brown</div>
+                        <div class="finish-type">Brushed/Matte</div>
+                    </div>
+                    <div class="finish-item">
+                        <div class="finish-color aluminum"></div>
+                        <div class="finish-label">Aluminum</div>
+                        <div class="finish-type">Brushed/Matte</div>
+                    </div>
+                    <div class="finish-item">
+                        <div class="finish-color steel"></div>
+                        <div class="finish-label">Steel</div>
+                        <div class="finish-type">Brushed/Matte</div>
+                    </div>
+                    <div class="finish-item">
+                        <div class="finish-color gold"></div>
+                        <div class="finish-label">Gold</div>
+                        <div class="finish-type">Brushed/Matte</div>
+                    </div>
+                `;
+            }
+
+            updateArrowPosition();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showProductDetails('g9');
+
+            const leftArrow = document.querySelector('.gallery-arrow.left');
+            const rightArrow = document.querySelector('.gallery-arrow.right');
+            const galleryContainer = document.querySelector('.details-gallery');
+
+            leftArrow.addEventListener('click', () => goToSlide(currentIndex - 1));
+            rightArrow.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            updateArrowPosition();
+
+            window.addEventListener('resize', () => {
+                goToSlide(currentIndex);
+                updateArrowPosition();
+            });
+        });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const productId = card.getAttribute('data-product');
+                showProductDetails(productId);
+            });
+        });
+        function toggleCollapsible(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+        }
+    </script>
+
+    <style>
+        .milling-types-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .milling-types-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .milling-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .milling-type {
+            flex: 1 1 100%;
+            max-width: 32%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .milling-type h4 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .milling-type img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .milling-type img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .modal-image {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            /* .milling-type {
+                flex: 1 1 100%;
+                max-width: 100%;
+            } */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Product Strip */
+        .product-strip {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 10px 20px;
+            gap: 15px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .product-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .product-strip::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .product-card {
+            flex: 0 0 auto;
+            width: 180px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            padding: 15px;
+        }
+
+        .product-card:hover {
+            /* No hover effects */
+        }
+
+        .product-card.active {
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+        }
+
+        .product-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .product-card.active .product-name {
+            color: #000000;
+        }
+
+        .product-details {
+            background: #f8f9fa;
+        }
+
+        .details-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            width: 600px;
+            min-width: 240px;
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 1;
+        }
+
+        .details-gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+            position: relative;
+        }
+
+        .gallery-img {
+            height: 350px;
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%);
+            background: #eee;
+            color: black;
+            border: none;
+            font-size: 24px;
+            padding: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s ease;
+        }
+
+        .gallery-arrow:hover {
+            background: #ddd;
+        }
+
+        .gallery-arrow.left {
+            left: 10px;
+        }
+
+        .gallery-arrow.right {
+            right: 10px;
+        }
+
+        .gallery-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .gallery-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background: #c5c5c5;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gallery-dot.active {
+            background: #000;
+        }
+
+        .details-text {
+            flex: 1;
+            min-width: 300px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .details-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .details-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #4b5d6b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .details-specs {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #000000;
+        }
+
+        .details-specs h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .details-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-specs li {
+            padding: 5px 0;
+            color: #5a6c7d;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .details-specs li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .close-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .product-strip {
+                padding: 20px 15px;
+                gap: 12px;
+            }
+
+            .product-card {
+                width: 140px;
+                padding: 12px;
+            }
+
+            .product-image {
+                height: 80px;
+                margin-bottom: 10px;
+            }
+
+            .product-name {
+                font-size: 0.85rem;
+            }
+
+            .details-content {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .details-text {
+                padding-left: 0;
+            }
+
+            .gallery-wrapper {
+                width: 100%;
+                height: auto;
+            }
+
+            .gallery-img {
+                height: auto;
+                max-height: 300px;
+            }
+
+            .gallery-arrow {
+                top: 50%;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* --- FEATURES & DIAGRAM --- */
+        .details-features {
+            list-style: disc inside;
+            margin: 15px 0 20px;
+            padding-left: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5d6b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .details-features li {
+            margin-bottom: 6px;
+        }
+
+        .details-diagram {
+            max-width: 500px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* --- FINISHES SECTION --- */
+        .finishes-section {
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .finishes-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .finishes-desc {
+            list-style: disc inside;
+            margin-bottom: 12px;
+            padding-left: 0;
+            font-size: 0.95rem;
+            color: #4b5d6b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .finishes-images {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .finish-swatch {
+            width: 90px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .finish-swatch img {
+            width: 100%;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .finish-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .finish-item {
+            text-align: center;
+            transition: transform 0.15s ease;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .finish-item:hover {
+            transform: translateY(-1px);
+        }
+
+        .finish-color {
+            width: 100%;
+            height: 45px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.15s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .finish-item:hover .finish-color {
+            border-color: #d1d5db;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .finish-label {
+            font-size: 0.9rem;
+            color: #2c3e50;
+            font-weight: 600;
+            line-height: 1.2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .finish-type {
+            font-size: 0.8rem;
+            color: #4b5d6b;
+            margin-top: 2px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .black {
+            background-image: url('https://www.cronosdesign.com/i/blackFinish.jpg');
+        }
+
+        .brown {
+            background-image: url('https://www.cronosdesign.com/i/brownFinish.jpg');
+        }
+
+        .aluminum {
+            background-image: url('https://www.cronosdesign.com/i/alumFinish.jpg');
+        }
+
+        .steel {
+            background-image: url('https://www.cronosdesign.com/i/steelFinish.jpg');
+        }
+
+        .gold {
+            background-image: url('https://www.cronosdesign.com/i/goldFinish.jpg');
+        }
+    </style>
+    <script>
+      document.addEventListener('click', function (e) {
+          if (e.target.matches('.milling-type img')) {
+              const modal = document.createElement('div');
+              modal.className = 'modal-overlay';
+              modal.innerHTML = '<img src="' + e.target.src + '" class="modal-image">';
+              modal.addEventListener('click', () => modal.remove());
+              document.body.appendChild(modal);
+          }
+      });
+    </script>
+</body>
+
+</html>
