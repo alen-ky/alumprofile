@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Out Fly Sliding Doors - Alumprofile</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-strip">
+            <div class="product-card" data-product="quadro">
+                <img src="https://www.cronosdesign.com/i/inOutDriveQ1.jpg" alt="Quadro" class="product-image">
+                <p class="product-name">Quadro</p>
+            </div>
+
+            <div class="product-card" data-product="plinto">
+                <img src="https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg" alt="Plinto" class="product-image">
+                <p class="product-name">Plinto</p>
+            </div>
+
+            <div class="product-card" data-product="easy">
+                <img src="https://www.cronosdesign.com/i/inOutDriveWood1.jpg"
+                    alt="Easy" class="product-image">
+                <p class="product-name">Easy</p>
+            </div>
+
+            <div class="product-card" data-product="wood">
+                <img src="https://www.cronosdesign.com/i/inOutDriveWood2.jpg" alt="Wood" class="product-image">
+                <p class="product-name">Wood</p>
+            </div>
+
+            <div class="product-card" data-product="duo">
+                <img src="https://www.cronosdesign.com/i/slidingDoorsDuoDrive3.jpg" alt="Duo" class="product-image">
+                <p class="product-name">Duo</p>
+            </div>
+
+            <div class="product-card" data-product="albatros">
+                <img src="https://www.cronosdesign.com/i/inOutFlyAlb1.jpg" alt="Albatros" class="product-image">
+                <p class="product-name">Albatros</p>
+            </div>
+
+            <div class="product-card" data-product="varia">
+                <img src="https://www.cronosdesign.com/i/slidingDoorsDuoDrive3.jpg" alt="Varia" class="product-image">
+                <p class="product-name">Varia</p>
+            </div>
+        </div>
+
+        <div id="product-details" class="product-details">
+            <div class="details-content">
+                <div class="gallery-wrapper">
+                    <button class="gallery-arrow left">&#8592;</button>
+                    <div class="details-gallery"></div>
+                    <button class="gallery-arrow right">&#8594;</button>
+                    <div class="gallery-dots"></div>
+                </div>
+                <div class="details-text">
+                    <h2 class="details-title" id="details-title"></h2>
+                    <div class="details-description" id="details-description"></div>
+                    <div class="details-diagram" id="details-diagram">
+                        <img src="" alt="Product Diagram" class="diagram-img">
+                    </div>
+                    <ul class="details-specs" id="details-specs-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            'quadro': {
+                title: 'Quadro',
+                gallery: [
+                    'https://www.cronosdesign.com/i/inOutDriveQ1.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ2.jpg',
+                    'https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                ],
+                description: 'Sliding doors are now conduits of style and connectivity. Say goodbye to bulky swinging doors that \
+                gobble space. Our sliding doors effortlessly slide, gifting you more room to breathe and dream.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/quadro_plinto_slid.png'
+            },
+            'plinto': {
+                title: 'Plinto',
+                gallery: [
+                    'https://www.cronosdesign.com/i/inOutDriveQ1.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ2.jpg',
+                    'https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                ],
+                description: 'Sliding doors are now conduits of style and connectivity. Say goodbye to bulky swinging doors that \
+                gobble space. Our sliding doors effortlessly slide, gifting you more room to breathe and dream.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/quadro_plinto_slid.png'
+            },
+            'easy': {
+                title: 'Easy',
+                gallery: [
+                    'https://www.cronosdesign.com/i/aventosHF.jpg',
+                    'https://www.cronosdesign.com/i/aventosHF.jpg',
+                    'https://www.cronosdesign.com/i/aventosHF.jpg'
+                ],
+                description: 'AVENTOS HS provides comfort of motion that is sure to impress. Even heavy doors can be opened effortlessly, and thanks to BLUMOTION, come to a gentle halt. The variable stop ensures that the door always remains in the desired position, so the handle will always be within reach. AVENTOS HS lift systems open doors up and over the top of the cabinet.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/easy_diagram.png'
+            },
+            'wood': {
+                title: 'Wood',
+                gallery: [
+                    'https://www.cronosdesign.com/i/aventosHF.jpg',
+                    'https://www.cronosdesign.com/i/aventosHF.jpg',
+                    'https://www.cronosdesign.com/i/aventosHF.jpg'
+                ],
+                description: 'With AVENTOS HL, the one-piece door front lifts up vertically and provides unhindered access to the interior. This lift system is the ideal solution for an appliance garage or wall cabinet. The door is easy to open and can be stopped at any desired position. It closes silently and effortlessly thanks to BLUMOTION.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/wood_diagram.png'
+            },
+            'duo': {
+                title: 'Duo',
+                gallery: [
+                    'https://www.cronosdesign.com/i/inOutDriveQ1.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ2.jpg',
+                    'https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                ],
+                description: 'Maximize your space with our Duo Sliding System. Say goodbye to the restrictions of traditional doors \
+                and hello to a world where every inch of your room is utilized to its fullest potential. The dual sliding mechanism \
+                ensures smooth, seamless operation, freeing up more space for you to enjoy.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/duoDiagramInOutDrive.jpg'
+            },
+            'albatros': {
+                title: 'Albatros',
+                gallery: [
+                    'https://www.cronosdesign.com/i/inOutDriveQ1.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ2.jpg',
+                    'https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                ],
+                description: 'Maximize your space with our Duo Sliding System. Say goodbye to the restrictions of traditional doors \
+                and hello to a world where every inch of your room is utilized to its fullest potential. The dual sliding mechanism \
+                ensures smooth, seamless operation, freeing up more space for you to enjoy.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/duoDiagramInOutDrive.jpg'
+            },
+            'varia': {
+                title: 'Varia',
+                gallery: [
+                    'https://www.cronosdesign.com/i/inOutDriveQ1.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ2.jpg',
+                    'https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg',
+                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                ],
+                description: 'Maximize your space with our Duo Sliding System. Say goodbye to the restrictions of traditional doors \
+                and hello to a world where every inch of your room is utilized to its fullest potential. The dual sliding mechanism \
+                ensures smooth, seamless operation, freeing up more space for you to enjoy.',
+                specs: [],
+                diagram: 'https://www.cronosdesign.com/i/duoDiagramInOutDrive.jpg'
+            }
+        };
+
+        let currentIndex = 0;
+        let gallerySize  = 0;
+
+        function goToSlide(idx) {
+            const galleryContainer = document.querySelector('.details-gallery');
+            const dots = document.querySelectorAll('.gallery-dot');
+
+            if (idx < 0) idx = gallerySize - 1;
+            if (idx >= gallerySize) idx = 0;
+
+            currentIndex = idx;
+            const slideWidth = galleryContainer.offsetWidth;
+            galleryContainer.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
+
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+
+        function showProductDetails(productId) {
+            const product = products[productId];
+
+            document.getElementById('details-title').textContent = product.title;
+            document.getElementById('details-description').textContent = product.description;
+
+            const specsList = document.getElementById('details-specs-list');
+            specsList.innerHTML = '';
+            product.specs.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                specsList.appendChild(li);
+            });
+
+            document.getElementById('details-diagram').querySelector('img').src = product.diagram || '';
+
+            const gallery = document.querySelector('.details-gallery');
+            gallery.innerHTML = '';
+
+            product.gallery.forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = product.title;
+                img.className = 'gallery-img';
+                gallery.appendChild(img);
+            });
+
+            const dotWrap = document.querySelector('.gallery-dots');
+            dotWrap.innerHTML = '';
+            product.gallery.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotWrap.appendChild(dot);
+            });
+            currentIndex = 0;
+            gallerySize  = product.gallery.length;
+            goToSlide(0);
+
+            document.querySelectorAll('.product-card').forEach(card =>
+                card.classList.remove('active')
+            );
+            document.querySelector(`[data-product="${productId}"]`)
+                .classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showProductDetails('quadro');
+
+            const leftArrow  = document.querySelector('.gallery-arrow.left');
+            const rightArrow = document.querySelector('.gallery-arrow.right');
+            const galleryContainer = document.querySelector('.details-gallery');
+
+            leftArrow.addEventListener('click', () => goToSlide(currentIndex - 1));
+            rightArrow.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            window.addEventListener('resize', () => goToSlide(currentIndex));
+        });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const productId = card.getAttribute('data-product');
+                showProductDetails(productId);
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: black;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .product-strip {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 10px 20px;
+            gap: 15px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .product-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .product-strip::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .product-card {
+            flex: 0 0 auto;
+            width: 180px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            padding: 15px;
+        }
+
+        .product-card.active {
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+        }
+
+        .product-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: black;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .product-card.active .product-name {
+            color: #000000;
+        }
+
+        .product-details {
+            background: #f8f9fa;
+        }
+
+        .details-content {
+            display: flex;
+            padding: 40px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            width: 500px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .details-gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+        }
+
+        .gallery-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #eee;
+            color: black;
+            border: none;
+            font-size: 24px;
+            padding: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: background 0.2s ease;
+        }
+
+        .gallery-arrow:hover {
+            background: #ddd;
+        }
+
+        .gallery-arrow.left {
+            left: 10px;
+        }
+
+        .gallery-arrow.right {
+            right: 10px;
+        }
+
+        .gallery-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .gallery-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background: #c5c5c5;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gallery-dot.active {
+            background: #000;
+        }
+
+        .details-text {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .details-title {
+            font-size: 2rem;
+            color: black;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .details-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: black;
+            margin-bottom: 25px;
+        }
+
+        .details-specs {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .details-specs h4 {
+            color: black;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .details-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-specs li {
+            padding: 5px 0;
+            color: black;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .close-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .product-strip {
+                padding: 20px 15px;
+                gap: 12px;
+            }
+
+            .product-card {
+                width: 140px;
+                padding: 12px;
+            }
+
+            .product-image {
+                height: 80px;
+                margin-bottom: 10px;
+            }
+
+            .product-name {
+                font-size: 0.85rem;
+            }
+
+            .details-content {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .details-text {
+                padding-left: 0;
+            }
+
+            .gallery-wrapper {
+                width: 100%;
+                height: 200px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+                .details-diagram {
+            margin-bottom: 25px;
+        }
+
+        .diagram-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+    </style>
+</body>
+
+</html>

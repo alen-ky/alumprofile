@@ -1,0 +1,55 @@
+<!-- Visible form with dynamic fields -->
+<div id="products">
+  <div class="product">
+    <input type="text" name="product_name[]" placeholder="Product Name">
+    <input type="number" name="quantity[]" placeholder="Quantity">
+    <input type="text" name="details[]" placeholder="Details">
+  </div>
+</div>
+<button type="button" onclick="addProduct()">+ Add Product</button>
+
+<!-- Submit button -->
+<button onclick="submitQuote()">Submit Quote</button>
+
+<!-- Hidden native Tilda form to capture lead -->
+<form class="t-form" style="display:none" id="tilda-form">
+  <input type="hidden" name="formname" value="Quote Request">
+  <input type="hidden" name="quote_data" id="quote-data">
+  <input type="submit">
+</form>
+
+<script>
+function addProduct() {
+  const productDiv = document.createElement("div");
+  productDiv.classList.add("product");
+  productDiv.innerHTML = `
+    <input type="text" name="product_name[]" placeholder="Product Name">
+    <input type="number" name="quantity[]" placeholder="Quantity">
+    <input type="text" name="details[]" placeholder="Details">
+  `;
+  document.getElementById("products").appendChild(productDiv);
+}
+
+function submitQuote() {
+  const products = [];
+  document.querySelectorAll("#products .product").forEach(prod => {
+    const name = prod.querySelector('input[name="product_name[]"]').value;
+    const qty = prod.querySelector('input[name="quantity[]"]').value;
+    const details = prod.querySelector('input[name="details[]"]').value;
+    products.push({ name, qty, details });
+  });
+
+  // Send to Tilda
+  const dataField = document.getElementById("quote-data");
+  dataField.value = JSON.stringify(products); // Or format as text if needed
+
+  document.getElementById("tilda-form").submit();
+
+  // Optional: send to your email/API
+  fetch('https://your-api.com/quote', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ products })
+  });
+}
+</script>

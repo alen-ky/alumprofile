@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminum Edge Bandings</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-strip">
+            <div class="product-card" data-product="brw-edge-banding">
+                <img src="https://www.cronosdesign.com/i.ashx?i=/i/img_7207-768x538.jpg&w=970" alt="BRW Edge Banding" class="product-image">
+                <p class="product-name">BRW</p>
+            </div>
+
+            <div class="product-card" data-product="s-011">
+                <img src="https://aluminumsys.com/wp-content/uploads/2023/07/s011Alen1.jpg" alt="S-011" class="product-image">
+                <p class="product-name">S-011</p>
+            </div>
+
+            <div class="product-card" data-product="s-012">
+                <img src="https://www.cronosdesign.com/i.ashx?i=/i/s012Alen.jpg&w=1244" alt="S-012"
+                    class="product-image">
+                <p class="product-name">S-012</p>
+            </div>
+
+            <div class="product-card" data-product="s-014">
+                <img src="https://www.cronosdesign.com/i/s014Alen.jpg" alt="S-014" class="product-image">
+                <p class="product-name">S-014</p>
+            </div>
+        </div>
+
+        <div id="product-details" class="product-details">
+            <div class="details-content">
+                <div class="gallery-wrapper">
+                    <button class="gallery-arrow left">&#8592;</button>
+                    <div class="details-gallery"></div>
+                    <button class="gallery-arrow right">&#8594;</button>
+                    <div class="gallery-dots"></div>
+                </div>
+                <div class="details-text">
+                    <h2 class="details-title" id="details-title"></h2>
+                    <div class="details-description" id="details-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            'brw-edge-banding': {
+                title: 'BRW Edge Banding',
+                image: 'https://www.cronosdesign.com/i.ashx?i=/i/img_7207-768x538.jpg&w=970',
+                gallery: [
+                    'https://www.cronosdesign.com/i.ashx?i=/i/img_7207-768x538.jpg&w=970',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/brw-nabijany-jpg-male.jpg&w=970'
+                ],
+                description: `
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+      <div style="flex: 1; min-width: 280px;">
+        <p>Aluminum edge banding solution for wood-like cabinetry applications.</p>
+        <p><strong>Price Per Bar:</strong></p>
+        <ul>
+          <li>Matte Gold 88": $87.21</li>
+          <li>Matte Black 88": $68.70</li>
+          <li>Natural Aluminum 94": $26.56</li>
+          <li>Volume discounts available.</li>
+        </ul>
+      </div>
+      <div style="flex: 1; min-width: 280px;">
+        <img src="https://www.cronosdesign.com/i.ashx?i=/i/brw-profile-sch.png&amp;w=1244" alt="BRW Profile Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+      </div>
+    </div>
+  `,
+                specs: [
+                    'Cabinet heights from 18 7/8" to 42"',
+                    'Cabinet widths up to 72"',
+                    'Bi-fold lift mechanism',
+                    'BLUMOTION soft close included',
+                    'Suitable for wood and aluminum doors'
+                ]
+            },
+            's-011': {
+                title: 'S-011',
+                gallery: [
+                    'https://static.tildacdn.com/tild6137-3666-4263-b930-366531313436/image.png',
+                    'https://aluminumsys.com/wp-content/uploads/2023/07/s011Alen.jpg'
+                ],
+                description: `
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+    <div style="flex: 1; min-width: 280px;">
+      <p>Anodizing: Natural Aluminum</p>
+      <p>Length: 6.5 Ft</p>
+      <p><strong>Price per bar: $36.34</strong></p>
+      <p>Volume discounts available.</p>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <img src="https://www.cronosdesign.com/i.ashx?i=/i/s011Diagram1.jpg&amp;w=1244" alt="S-011 Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+    </div>
+  </div>
+`,
+                specs: [
+                    'Cabinet Heights from 10" to 24"',
+                    'Cabinet Widths from up to 72"',
+                    'Integrated opening angle stop',
+                    'Compact design for small cabinets',
+                    'Strong enough for larger cabinets'
+                ]
+            },
+            's-012': {
+                title: 'S-012',
+                gallery: [
+                    'https://www.cronosdesign.com/i.ashx?i=/i/s012Alen1.jpg&w=1244',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/s012Alen.jpg&w=1244'
+                ],
+                description: `
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+    <div style="flex: 1; min-width: 280px;">
+      <p>Anodizing: Natural Aluminum</p>
+      <p>Length: 6.5 Ft</p>
+      <p><strong>Price per bar: $36.00</strong></p>
+      <p>Volume discounts available.</p>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <img src="https://www.cronosdesign.com/i.ashx?i=/i/S-012.png&amp;w=1244" alt="S-012 Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+    </div>
+  </div>
+`,
+                specs: [
+                    'Cabinet heights from 13 3/4" to 31 1/2"',
+                    'Cabinet widths up to 72"',
+                    'Up and over opening mechanism',
+                    'Variable stop feature',
+                    'BLUMOTION soft close action'
+                ]
+            },
+            's-014': {
+                title: 'S-014',
+                gallery: [
+                    'https://www.cronosdesign.com/i/s014Alen.jpg',
+                    'https://www.cronosdesign.com/i/s014Alen1.jpg'
+                ],
+                description: `
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+    <div style="flex: 1; min-width: 280px;">
+      <p>Anodizing: Natural Aluminum</p>
+      <p>Length: 6.5 Ft</p>
+      <p><strong>Price per bar: $36.33</strong></p>
+      <p>Volume discounts available.</p>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <img src="https://www.cronosdesign.com/i.ashx?i=/i/S-014.png&amp;w=1244" alt="S-014 Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+    </div>
+  </div>
+`,
+                specs: [
+                    'Cabinet heights from 11 13/16" to 22 13/16"',
+                    'Cabinet widths up to 72"',
+                    'Vertical lift mechanism',
+                    'One-piece door front',
+                    'Ideal for appliance garages'
+                ]
+            }
+        };
+
+        let currentIndex = 0;
+        let gallerySize = 0;
+
+        function goToSlide(idx) {
+            const galleryContainer = document.querySelector('.details-gallery');
+            const dots = document.querySelectorAll('.gallery-dot');
+
+            if (idx < 0) idx = gallerySize - 1;
+            if (idx >= gallerySize) idx = 0;
+
+            currentIndex = idx;
+            const slideWidth = galleryContainer.offsetWidth;
+            galleryContainer.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
+
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+
+        function showProductDetails(productId) {
+            const product = products[productId];
+
+            document.getElementById('details-title').textContent = product.title;
+            document.getElementById('details-description').innerHTML = product.description;
+
+            const gallery = document.querySelector('.details-gallery');
+            gallery.innerHTML = '';
+
+            product.gallery.forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = product.title;
+                img.className = 'gallery-img';
+                gallery.appendChild(img);
+            });
+
+            const dotWrap = document.querySelector('.gallery-dots');
+            dotWrap.innerHTML = '';
+            product.gallery.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotWrap.appendChild(dot);
+            });
+            currentIndex = 0;
+            gallerySize = product.gallery.length;
+            goToSlide(0);
+
+            document.querySelectorAll('.product-card').forEach(card =>
+                card.classList.remove('active')
+            );
+            document.querySelector(`[data-product="${productId}"]`)
+                .classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const firstProductCard = document.querySelector('.product-card');
+            if (firstProductCard) {
+                const firstProductId = firstProductCard.getAttribute('data-product');
+                showProductDetails(firstProductId);
+            }
+
+            const leftArrow = document.querySelector('.gallery-arrow.left');
+            const rightArrow = document.querySelector('.gallery-arrow.right');
+            const galleryContainer = document.querySelector('.details-gallery');
+
+            leftArrow.addEventListener('click', () => goToSlide(currentIndex - 1));
+            rightArrow.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            window.addEventListener('resize', () => goToSlide(currentIndex));
+        });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const productId = card.getAttribute('data-product');
+                showProductDetails(productId);
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .product-strip {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 30px 20px;
+            gap: 15px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .product-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .product-strip::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .product-card {
+            flex: 0 0 auto;
+            width: 160px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            padding: 15px;
+        }
+
+        .product-card.active {
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+        }
+
+        .product-name {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            margin-bottom: 0;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .product-card.active .product-name {
+            color: #000000;
+        }
+
+        .product-details {
+            background: #f8f9fa;
+        }
+
+        .details-content {
+            display: flex;
+            padding: 40px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            width: 500px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .details-gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+        }
+
+        .gallery-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #eee;
+            color: black;
+            border: none;
+            font-size: 24px;
+            padding: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s ease;
+        }
+
+        .gallery-arrow:hover {
+            background: #ddd;
+        }
+
+        .gallery-arrow.left {
+            left: 10px;
+        }
+
+        .gallery-arrow.right {
+            right: 10px;
+        }
+
+        .gallery-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .gallery-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background: #c5c5c5;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gallery-dot.active {
+            background: #000;
+        }
+
+        .details-text {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .details-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .details-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5a6c7d;
+            margin-bottom: 25px;
+        }
+
+        .details-specs {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #000000;
+        }
+
+        .details-specs h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .details-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-specs li {
+            padding: 5px 0;
+            color: #5a6c7d;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .details-specs li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .close-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .product-strip {
+                padding: 20px 15px;
+                gap: 12px;
+            }
+
+            .product-card {
+                width: 140px;
+                padding: 12px 10px;
+            }
+
+            .product-image {
+                height: 80px;
+                margin-bottom: 10px;
+            }
+
+            .product-name {
+                font-size: 0.85rem;
+            }
+
+            .details-content {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .details-text {
+                padding-left: 0;
+            }
+
+            .gallery-wrapper {
+                width: 100%;
+                height: 200px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

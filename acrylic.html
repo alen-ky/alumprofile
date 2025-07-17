@@ -1,0 +1,71 @@
+<div class="acrylic-options">
+    <div class="acrylic-card" style="background-image: url('https://www.cronosdesign.com/i/luxeCover1.jpg');"
+        onclick="showSuppliers('High Gloss')">
+        <span>High Gloss</span>
+    </div>
+    <div class="acrylic-card" style="background-image: url('https://www.cronosdesign.com/i/zenitCover1.jpg');"
+        onclick="showSuppliers('Matte')">
+        <span>Matte</span>
+    </div>
+    <div class="acrylic-card" style="background-image: url('https://www.cronosdesign.com/i/decorCover1.jpg');"
+        onclick="showSuppliers('Textured')">
+        <span>Textured</span>
+    </div>
+</div>
+
+<div class="supplier-options" id="supplier-choice" style="display: none;">
+    <h2 id="supplier-title">Choose Supplier</h2>
+    <div class="acrylic-options">
+        <div class="acrylic-card" style="background-image: url('https://www.cronosdesign.com/i/zenitCover1.jpg');">
+            <span>Alvic</span>
+        </div>
+        <div class="acrylic-card"
+            style="background-image: url('https://www.cronosdesign.com/i/niemannMatteNewCover.png');">
+            <span>Niemann</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .acrylic-options {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 40px auto;
+        flex-wrap: wrap;
+    }
+
+    .acrylic-card {
+        background-size: cover;
+        background-position: center;
+        width: 280px;
+        height: 380px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .acrylic-card:hover {
+        transform: scale(1.02);
+    }
+
+    .acrylic-card span {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1.2rem;
+        color: white;
+        text-shadow: 1px 1px 5px black;
+    }
+</style>
+
+<script>
+    function showSuppliers(finish) {
+        document.getElementById('supplier-choice').style.display = 'block';
+        document.getElementById('supplier-title').textContent = 'Choose Supplier for ' + finish.replace('-', ' ').toUpperCase();
+    }
+</script>

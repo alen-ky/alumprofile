@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<body>
+    <div class="characteristics-section" id="characteristics-toggle">
+        <div class="characteristics-header">
+            <div>
+                <strong>Characteristics</strong><br>
+                <span class="char-sub">Click here to expand</span>
+            </div>
+            <div class="char-arrow">&#9654;</div>
+        </div>
+        <div class="characteristics-content">
+            <div class="char-features">
+                <div class="char-feature">
+                    <img src="https://www.cronosdesign.com/i/scRes.png" alt="Scratch Resistant">
+                    <h4>Highly scratch-resistant</h4>
+                    <p>Unique qualities that allow it to be applied in environments with continuous contact of objects.</p>
+                </div>
+                <div class="char-feature">
+                    <img src="https://www.cronosdesign.com/i/scRes.png" alt="Antibacterial">
+                    <h4>Antibacterial treatment</h4>
+                    <p>Protective shield on the surface that prevents the spread of harmful microorganisms.</p>
+                </div>
+                <div class="char-feature">
+                    <img src="https://www.cronosdesign.com/i/scRes.png" alt="High Gloss">
+                    <h4>High gloss</h4>
+                    <p>Luxe technology offers extraordinary beauty in its reflection and finishes.</p>
+                </div>
+                <div class="char-feature">
+                    <img src="https://www.cronosdesign.com/i/scRes.png" alt="Stain Resistance">
+                    <h4>Stain resistance</h4>
+                    <p>Products designed for daily use, resistant to all types of food stains.</p>
+                </div>
+                <div class="char-feature">
+                    <img src="https://www.cronosdesign.com/i/scRes.png" alt="Easy Cleaning">
+                    <h4>Easy cleaning</h4>
+                    <p>Surfaces easy to maintain and clean thanks to their high-quality finish.</p>
+                </div>
+                <div class="char-feature">
+                    <img src="https://www.cronosdesign.com/i/scRes.png" alt="Eco Friendly">
+                    <h4>Environmentally friendly</h4>
+                    <p>Products manufactured with certified raw materials from sustainable forests.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('characteristics-toggle').addEventListener('click', function () {
+            this.classList.toggle('expanded');
+        });
+    </script>
+    <style>
+        body {
+            font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+        }
+        .characteristics-section {
+            border-top: 1px solid #ddd;
+            margin: 0 40px 40px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .characteristics-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .char-sub {
+            font-style: italic;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .char-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .characteristics-section.expanded .char-arrow {
+            transform: rotate(90deg);
+        }
+
+        .characteristics-content {
+            display: none;
+            padding-top: 10px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .characteristics-section.expanded .characteristics-content {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .char-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px 20px;
+        }
+
+        .char-feature {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            text-align: center;
+        }
+
+        .char-feature img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .char-feature h4 {
+            margin: 10px 0 5px;
+            font-size: 1rem;
+        }
+
+        .char-feature p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</body>
