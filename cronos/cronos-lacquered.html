@@ -1,0 +1,1206 @@
+
+<div data-url="laquered_BigIntro"></div>
+
+    <style>
+    
+    .container {
+      position: relative;
+      width: 100%;
+      
+    }
+    
+    .image {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      /*border-radius: 25px;*/
+    }
+    
+    
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #0c8593;
+      overflow: hidden;
+      width: 0;
+      height: 100%;
+      transition: .5s ease;
+      margin-left: 15px;
+      /*border-radius: 25px;*/
+      }
+      
+    
+    .container:hover .overlay {
+      width: 90%;
+      opacity: 0.75;
+      
+    }
+    
+    .textL {
+      white-space: nowrap;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+    
+    .table {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .column {
+        flex: 1 0 5%; /* Adjust the width as per your requirement */
+        padding: 5px;
+    }
+    
+    .cell {
+        padding: 5px;
+    }
+    
+    .cell img {
+        width: 100%;
+        object-fit: contain;
+        height: 250px;
+        box-shadow: 5px 5px 5px #999;
+        object-fit: cover;
+        box-shadow: 5px 5px 2px #ccc;
+        -moz-box-shadow: 5px 5px 2px #ccc;
+        -webkit-box-shadow: 5px 5px 2px #ccc;
+        -khtml-box-shadow: 5px 5px 2px #ccc;
+    }
+    
+    .cell2 img {
+        width: 100%;
+        height: 250px;
+        box-shadow: 5px 5px 5px #999;
+        object-fit: cover;
+    }
+    .row {
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /*margin-bottom: 4px;*/
+    }
+    </style>
+<!-- tabs -->
+<div class="wrapperTabsTpl">
+    <div class="tabsTpl tabsTpl-intro">
+        <div class="tab" onclick="scrollToElement('#About')">
+            <div class="tab-inner">
+                <div class="tab-txt">
+                    About
+                </div>
+            </div>
+        </div>
+        <div class="tab" onclick="scrollToElement('#Styles')">
+            <div class="tab-inner">
+                <div class="tab-txt">
+                    <span style="margin-right:7px;"><i class="far fa-paint-brush fs-16"></i></span>  Styles
+                </div>
+            </div>
+        </div>
+        <div class="tab" onclick="scrollToElement('#Gallery')">
+            <div class="tab-inner">
+                <div class="tab-txt">
+                    Gallery
+                </div>
+            </div>
+        </div>
+       <div class="tab" onclick="scrollToElement('#Colors')">
+            <div class="tab-inner">
+                <div class="tab-txt">
+                    Colors
+                </div>
+            </div>
+        </div>
+               <div class="tab" onclick="window.location='https://www.cronosdesign.com/en/shop/samples/lacquered-samples/'">
+            <div class="tab-inner">
+                <div class="tab-txt">
+                    Shop Samples
+                </div>
+            </div>
+        </div>    
+      
+        
+        <div class="tab" onclick="scrollToElement('#Configurator')">
+            <div class="tab-inner">
+                <div class="tab-txt">
+                    <span class="btnTpl btnTpl-bg-cian"><span class=""><i class="fal fa-cog fs-18"></i>Configurator</span></span>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- /tabs -->
+
+<div class="contentPage">
+    
+    <div class="tileLayoutD">
+        <div class="tileCell" style="text-align: left;">
+            <p id="About">Lacquered cabinet doors will give your kitchen a modern/contemporary stylish look, enhancing the busy kitchen environment with practicality. The multi-layered painted finish will ensure that our beautiful high gloss or matte finish resists scratches much better than any vinyl gloss door would. Over 150 different color options for endless design possibilities.</p>
+            
+            <p>Matte Lacquered Doors are also available in SoftTouch, a special coating that softens the touch of the door. It provides the door with an anti-glare softness and scratch resistance after just one coat. Available thickness options: 18mm and 22mm.</p>
+            <!--<img src="/i/lacqueredDoorsP1.jpg" style="width: 50%; height: auto;" />-->
+        </div>
+        <div class="tileCell">
+            <img src="/i/lacqueredDoorsP2.jpg"  alt="" onclick="showModal('/i/lacqueredDoorsP2.jpg')" />
+        </div>
+    </div>
+    
+    
+        <div class="tpl tpl-2cols">
+            <div class="row">
+                <div class="col-xxs-12 col-xs-30-18">
+                    <div class="h4">
+                        Benefits
+                    </div>
+                     <ul>
+                        <li>Multi-layered painted finish.</li>
+                        <li>Enhanced resistance to scratches, chemical agents and humidity.</li>
+                        <li>Smooth surface will not promote growth of germs.</li>
+                        <li>Helps create hygienic kitchen.</li>
+                        <li>Average fabrication time only 4-6 weeks.</li>
+                    </ul>
+                </div>
+                <div class="col-xxs-12 col-xs-30-12">
+                    <div class="h2">
+                        &nbsp;
+                    </div>
+                    
+                </div>        
+            </div>    
+        </div>
+<!-- /tpl 2cols -->
+
+
+<!-- <div class="h2 mb-1" id="Styles">Door Styles</div> -->
+
+
+
+<!-- <p>Please select available door finish below to preview available inserts and integrated handle options.</p> -->
+<!--<div data-url="lacquered_SmallSquares" data-show="all"></div>-->
+
+
+
+<style>
+    .tileLayout {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+        /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        padding-bottom: 30px;
+    }
+    .tileLayoutD {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        padding-bottom: 30px;
+    }
+
+    .tileCell {
+        text-align: center;
+        padding: 1px;
+    }
+
+    .tileCell img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        transition: transform .2s ease;
+    }
+    
+ .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        width: 600px;
+        height: auto;
+        /*border: 5px solid #fff;*/
+        /*box-sizing: border-box;*/
+    }
+
+    #modalImg{
+        width: 1000px;
+        height: 1000px;
+        object-fit: contain;
+    }
+        
+    @media(max-width: 600px) {
+        .tileLayout {
+            grid-template-columns: 1fr 1fr;
+        }
+        .tileLayoutD {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* Content Sections */
+    .contentPage {
+      width: 100%;
+    }
+
+    .intro-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin: 0 auto 60px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .intro-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      max-width: 350px;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 2px solid #e9ecef;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin: 60px auto 40px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #0e8593;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    .subsection-title {
+      font-size: 1.8rem;
+      color: #333;
+      margin: 50px auto 30px;
+      padding-left: 20px;
+      border-left: 4px solid #0e8593;
+      max-width: 1200px;
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin: 0 auto 40px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    .product-card {
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid #e9ecef;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      background: white;
+    }
+
+    .product-card:hover {
+      border-color: #0e8593;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      color: inherit;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      transition: none;
+      background: #fafafa;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    .product-info {
+      padding: 15px 20px 20px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-divider {
+      height: 3px;
+      background: #0e8593;
+      margin: 0;
+      border: none;
+      flex-shrink: 0;
+    }
+
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    /* Insert Grid */
+    .insert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin: 0 auto 60px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    .insert-card {
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid #e9ecef;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+    }
+
+    .insert-card:hover {
+      border-color: #0e8593;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      color: inherit;
+    }
+
+    .insert-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: none;
+      border: 1px solid #e9ecef;
+    }
+
+    .insert-card h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    /* Configurator Section */
+    .configurator-section {
+      color: #333;
+      padding: 80px 40px;
+      text-align: center;
+      border-radius: 8px;
+      margin: 60px auto;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #e9ecef;
+      max-width: 1200px;
+      width: 100%;
+      background: #fafafa;
+    }
+
+    .configurator-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('/i/gallery/bigSizeGallery/temp_3_constr_doors.jpg') center/cover;
+      opacity: 0.05;
+      z-index: 1;
+    }
+
+    .configurator-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .configurator-section .dir {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #0e8593;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .configurator-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .configurator-section .intro {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #666;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: #0e8593;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 12px rgba(14, 133, 147, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #0a6b75;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(14, 133, 147, 0.4);
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+      }
+      .insert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .intro-image img {
+        max-width: 280px;
+        height: 200px;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .subsection-title {
+        font-size: 1.5rem;
+        margin: 30px auto 20px;
+        padding-left: 20px;
+        text-align: left;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .product-card {
+        height: 280px;
+      }
+
+      .product-card img {
+        height: 180px;
+        padding: 15px;
+      }
+
+      .insert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .insert-card {
+        min-height: 200px;
+        padding: 20px;
+      }
+
+      .insert-card img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .product-grid, .insert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 0 10px;
+      }
+
+      .product-card {
+        height: 260px;
+      }
+
+      .product-card img {
+        height: 160px;
+        padding: 10px;
+      }
+
+      .insert-card {
+        min-height: 180px;
+        padding: 15px;
+      }
+
+      .insert-card img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .subsection-title {
+        padding-left: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Utility Classes */
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-4 {
+      margin-bottom: 2rem;
+    }
+
+    .hidden-phone {
+      display: block;
+    }
+
+    @media (max-width: 576px) {
+      .hidden-phone {
+        display: none;
+      }
+    }
+</style>
+
+<!-- <div class="tileLayout">
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/forli.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/forli/">
+                <div class="overlay">
+                    <div class="textL">Forli</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/gevona.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/gevona/">
+                <div class="overlay">
+                    <div class="textL">Gevona</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/pianoUpd.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/piano/">
+                <div class="overlay">
+                    <div class="textL">Piano</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/foggia.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/foggia/">
+                <div class="overlay">
+                    <div class="textL">Foggia</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/marinoDue.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/marino-duo/">
+                <div class="overlay">
+                    <div class="textL">Marino Duo</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/livorno.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/livorno/">
+                <div class="overlay">
+                    <div class="textL">Livorno</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/vibo.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/vibo/">
+                <div class="overlay">
+                    <div class="textL">Vibo</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/torinoTableCover1.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/torino/">
+                <div class="overlay">
+                    <div class="textL">Torino</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/lucca.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/lucca/">
+                <div class="overlay">
+                    <div class="textL">Lucca</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/florence.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/florence/">
+                <div class="overlay">
+                    <div class="textL">Florence</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/fano.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/fano/">
+                <div class="overlay">
+                    <div class="textL">Fano</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/salerno.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/salerno/">
+                <div class="overlay">
+                    <div class="textL">Salerno</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/messina.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/messina/">
+                <div class="overlay">
+                    <div class="textL">Messina</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/milan.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/milan/">
+                <div class="overlay">
+                    <div class="textL">Milan</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/naples.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/naples/">
+                <div class="overlay">
+                    <div class="textL">Naples</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/rome.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/rome/">
+                <div class="overlay">
+                    <div class="textL">Rome</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/pesaro-teramo.jpg" class="image">
+            <a class="link"
+                href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/pesaro-teramo/">
+                <div class="overlay">
+                    <div class="textL">Pesaro Teramo</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/savona.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/savona/">
+                <div class="overlay">
+                    <div class="textL">Savona</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/cortina.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/cortina/">
+                <div class="overlay">
+                    <div class="textL">Cortina</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/taranto.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/taranto/">
+                <div class="overlay">
+                    <div class="textL">Taranto</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/turin.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/turin/">
+                <div class="overlay">
+                    <div class="textL">Turin</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/venice-wb1-upd1.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/venice/">
+                <div class="overlay">
+                    <div class="textL">Venice</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/bologna-wb1-upd.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/bologna/">
+                <div class="overlay">
+                    <div class="textL">Bologna</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="tileCell">
+        <div class="container">
+            <img src="/i/novaraFrontPic.jpg" class="image">
+            <a class="link" href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/novara/">
+                <div class="overlay">
+                    <div class="textL">Novara</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div> -->
+
+
+    <div id="Styles" class="section-header">
+      <h2>Lacquered Door Styles</h2>
+    </div>
+
+    <h3 class="subsection-title">Doors</h3>
+    <div class="product-grid">
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/forli/" class="product-card">
+        <img src="/i/forli.png" alt="Forli Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">FORLI</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/gevona/" class="product-card">
+        <img src="/i/gevona.png" alt="Gevona Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">GEVONA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/foggia/" class="product-card">
+        <img src="/i/FOGGIA-ICA-103.jpg " alt="Foggia Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">FOGGIA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/florence/" class="product-card">
+        <img src="/i/florence.png" alt="Florence Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">FLORENCE</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/salerno/" class="product-card">
+        <img src="/i/salerno.png" alt="Salerno Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">SALERNO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/messina/" class="product-card">
+        <img src="/i/messina.png" alt="messina Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">MESSINA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/milan/" class="product-card">
+        <img src="/i/milan.png" alt="Milan Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">MILAN</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/naples/" class="product-card">
+        <img src="/i/naples.png" alt="Naples Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">NAPLES</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/rome/" class="product-card">
+        <img src="/i/rome.png" alt="Rome Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">ROME</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/taranto/" class="product-card">
+        <img src="/i/taranto.png" alt="Taranto Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">TARANTO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/turin/" class="product-card">
+        <img src="/i/turin.png" alt="Turin Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">TURIN</h5>
+        </div>
+      </a>
+      
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/venice/" class="product-card">
+        <img src="/i/venice.png" alt="Venice Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">VENICE</h5>
+        </div>
+      </a>
+      
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/bologna/" class="product-card">
+        <img src="/i/bologna.png" alt="Bologna Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">BOLOGNA</h5>
+        </div>
+      </a>
+      
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/novara/" class="product-card">
+        <img src="/i/novara.png" alt="Novara Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">NOVARA</h5>
+        </div>
+      </a>
+    </div>
+
+    <h3 class="subsection-title">Doors with Integrated Handle</h3>
+    <div class="product-grid">
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/lucca/" class="product-card">
+        <img src="/i/lucca.png" alt="Lucca Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">LUCCA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/piano/" class="product-card">
+        <img src="/i/piano.png" alt="Piano" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">PIANO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/marino-duo/" class="product-card">
+        <img src="/i/marino.png" alt="Marino Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">MARINO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/livorno/" class="product-card">
+        <img src="/i/livorno.png" alt="Livorno Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">LIVORNO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/vibo/" class="product-card">
+        <img src="/i/vibo.png" alt="Vibo Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">VIBO</h5>
+        </div>
+      </a>
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/torino/" class="product-card">
+        <img src="/i/torino.png" alt="Torino Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">TORINO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/pesaro-teramo/" class="product-card">
+        <img src="/i/pesaro.png" alt="Pesaro Teramo Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">PESARO TERAMO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/fano/" class="product-card">
+        <img src="/i/fano.png" alt="Fano Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">FANO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/savona/" class="product-card">
+        <img src="/i/savona.png" alt="Savona Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">SAVONA</h5>
+        </div>
+      </a>
+      
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/high-gloss-matte-lacquered/cortina/" class="product-card">
+        <img src="/i/cortina.png" alt="Cortina Lacquered Doors" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">CORTINA</h5>
+        </div>
+      </a>
+
+      
+    </div>
+
+
+
+<div class="h2" style="padding-top: 50px;" id="Gallery">Gallery</div>
+<div data-url="lacquered_BigIncnt" id="Gallery"></div>
+
+
+<div class="h4 mb-1" id="Colors">Standard Color Options</div><p>18 colors</p>
+<div data-url="lacquered-standart-colors_SmallCircles" data-type="mini" data-show="overlay"></div>
+
+<div class="h4 mb-1">ICA – color chart</div>
+<p>Italian high-performance coating.</p>
+<div data-url="ICA-color_SmallCircles" data-type="mini" data-show="overlay"></div>
+
+<div class="h4 mb-1">RAL Color Chart</div>
+<div data-url="RAL-color_SmallCircles" data-show="overlay" data-type="mini"></div>
+
+    <div id="myModal" class="modal" onclick="closeModal()" style="cursor: zoom-out;" >
+        <img id="modalImg" src="" alt="Modal Image" style="width: 1000px; height: auto; object-fit: contain">
+    </div>
+    
+
+    <script>
+            function showModal(imageSrc) {
+                var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("modalImg");
+                modal.style.display = "block";
+                modalImg.src = imageSrc;
+            }
+    
+            function closeModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+        </script>
+
+<div class="tpl tpl-gotoConstr doors" id="Configurator" data-lazyload="true" data-src_bg="/i/gallery/bigSizeGallery/temp_3_constr_doors.jpg">
+    <div class="dir">
+        DOOR DESIGNER
+    </div>
+    <div class="h1">
+        Customize High Gloss Lacquered Cabinet Doors
+    </div>
+    <div class="intro">
+       You can now design your own door and buy it online using our proprietary interactive online tool. <br/>Create your own door to your own specifications.
+    </div>
+    <a href="/en/cabinet-doors/door-designer-online/"  class="btnTpl btnTpl-bg-cian"><span class=""><i class="fal fa-cog fs-18"></i>Get Started</span></a>
+</div>
+<!-- /tpl goto constr -->
+
+</div>

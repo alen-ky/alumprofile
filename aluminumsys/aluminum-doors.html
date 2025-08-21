@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminum Frame Cabinet Doors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Prevent horizontal overflow */
+        html,
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        .accessories-section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        h3.accessory-title {
+            color: #000;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .accessory-item {
+            text-align: center;
+        }
+
+        .accessory-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .accessory-item .item-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .close-btn {
+            visibility: hidden;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            font-family: "Inter", Sans-Serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            touch-action: manipulation;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .contentPage {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .intro-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin: 0 auto 60px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .intro-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro-image img {
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            object-fit: contain;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 60px auto 40px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #000;
+            margin: 15px auto;
+        }
+
+        .subsection-title {
+            color: #805031;
+            font-size: 1.8rem;
+            /* color: #333; */
+            margin: 50px auto 30px;
+            padding-left: 20px;
+            border-left: 4px solid #000;
+            max-width: 1200px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .product-grid {
+            display: flex;
+            gap: 20px;
+            margin: 0 auto 40px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            overflow-x: auto;
+            overflow-y: visible;
+            flex-wrap: nowrap;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .product-card {
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+            border: 2px solid #e9ecef;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            background: #cdbfab;
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
+            width: 200px;
+            border-radius: 10px;
+            scroll-snap-align: start;
+        }
+
+        .product-card:hover {
+            border-color: #000;
+            color: inherit;
+        }
+
+        .product-card.active {
+            border-color: #000;
+            background: #f8f9fa;
+            box-shadow: 0 4px 16px rgba(14, 133, 147, 0.2);
+            border-radius: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+            transition: none;
+            background: #fff;
+            padding: 15px;
+            flex-shrink: 0;
+        }
+
+        .product-info {
+            padding: 12px 15px 15px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-divider {
+            height: 3px;
+            background: #000;
+            margin: 0;
+            border: none;
+            flex-shrink: 0;
+        }
+
+        .product-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .frames-section {
+            margin: 0 auto 60px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .dropdown-section {
+            width: calc(100% - 40px);
+            background: white;
+            border: 2px solid #000;
+            margin: 30px auto 60px;
+            padding: 30px;
+            display: none;
+            animation: slideDown 0.3s ease-out;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .dropdown-section.active {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-content {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .dropdown-content,
+        .dropdown-bottom,
+        .specs-anode-grid,
+        .anode-col,
+        .specs-col {
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .gallery-section h3,
+        .info-section h3 {
+            color: #000;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .gallery-carousel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .gallery-main {
+            position: relative;
+            background: #fafafa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-main img {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #333;
+            border: 2px solid #e9ecef;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 1;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-nav:hover {
+            background: #f5f5f5;
+            border-color: #ccc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-nav.prev {
+            left: 15px;
+        }
+
+        .gallery-nav.next {
+            right: 15px;
+        }
+
+
+        .gallery-counter {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .gallery-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-dot:hover {
+            background: #000;
+        }
+
+        .gallery-dot.active {
+            background: #000;
+        }
+
+        .dropdown-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            border-top: 2px solid #e9ecef;
+            padding-top: 25px;
+        }
+
+        .frame-diagrams-section h3 {
+            color: #000;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .frame-diagrams {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .frame-diagram {
+            padding: 15px;
+            text-align: center;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .frame-diagram img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .frame-diagram h5 {
+            font-size: 0.9rem;
+            color: #333;
+            margin: 0;
+        }
+
+        .anode-section-bottom {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .anode-section-bottom h3 {
+            color: #000;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .anode-options {
+            display: grid;
+            gap: 8px;
+            max-width: 100%;
+            box-sizing: border-box;
+            /* Default: 3 columns for small screens */
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .anode-option {
+            padding: 12px 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .anode-option .anode-sample {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 8px;
+            border: 2px solid #ddd;
+            object-fit: cover;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+
+        .anode-option .option-name {
+            font-size: 0.8rem;
+            height: 32px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #f8f9fa;
+            padding: 16px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .info-box p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .info-box .specs h5 {
+            margin-top: 4px;
+            margin-bottom: -5px;
+            font-size: 0.9rem;
+        }
+
+        .info-box .specs {
+            background: white;
+            padding-top: 1px;
+            border-radius: 4px;
+        }
+
+        .specs-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specs-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .specs-list li:last-child {
+            border-bottom: none;
+        }
+
+        .additional-text-below {
+            margin-top: 22px;
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+
+        .shop-samples-section {
+            margin-bottom: 32px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 28px;
+            margin-bottom: 0;
+        }
+
+        .shop-samples-section h3 {
+            color: #000;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+        }
+
+        .shop-samples-buttons {
+            display: flex;
+            /* Change from -webkit-inline-box */
+            flex-wrap: wrap;
+            gap: 12px;
+            width: 100%;
+            /* Change from 50% */
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+
+        .shop-sample-btn {
+            display: inline-block;
+            background: #805031;
+            color: #fff !important;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 28px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: background 0.2s;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+
+        .specs-anode-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        .specs-col {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .frame-diagrams-section {
+            margin-bottom: 0;
+        }
+
+        .shop-samples-section {
+            margin-top: 28px;
+            margin-bottom: 0;
+        }
+
+        .anode-col {
+            width: 100%;
+            min-width: 220px;
+            max-width: 340px;
+            box-sizing: border-box;
+            overflow-x: auto;
+        }
+
+        .anode-col .anode-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            max-width: 100%;
+        }
+
+        .anode-option {
+            min-width: 0;
+        }
+
+        .configurator-section {
+            color: #333;
+            padding: 80px 40px;
+            text-align: center;
+            margin: 60px auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #e9ecef;
+            max-width: 1200px;
+            width: 100%;
+            background: #fafafa;
+            border-radius: 10px;
+        }
+
+        .configurator-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.cronosdesign.com/i/gallery/bigSizeGallery/temp_3_constr_doors.jpg') center/cover;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .configurator-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .configurator-section .dir {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .configurator-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .configurator-section .intro {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: #000;
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 12px rgba(14, 133, 147, 0.3);
+            border-radius: 6px;
+            min-height: 44px;
+        }
+
+        .cta-button:hover {
+            background: #000;
+            box-shadow: 0 6px 16px rgba(14, 133, 147, 0.4);
+            color: white;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+
+        .hidden-phone {
+            display: block;
+        }
+
+        .zoom-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            cursor: zoom-out;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .zoom-modal.active {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .zoom-modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .zoom-modal-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            cursor: zoom-out;
+            border-radius: 8px;
+        }
+
+        .zoom-modal-close {
+            position: absolute;
+            top: -50px;
+            right: -25px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 10001;
+            border-radius: 50%;
+        }
+
+        .zoom-modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+
+        .zoom-modal-info {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            white-space: nowrap;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .zoomable {
+            cursor: zoom-in;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .zoom-modal.active .zoom-modal-content {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        .zoom-modal-image.loading {
+            opacity: 0.5;
+        }
+
+        /* IMPROVED RESPONSIVE DESIGN */
+
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .section-header {
+                margin: 40px auto 30px;
+                padding: 0 15px;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .subsection-title {
+                font-size: 1.6rem;
+                margin: 40px auto 25px;
+                padding-left: 15px;
+            }
+
+            .product-grid {
+                gap: 15px;
+                padding: 0 15px;
+            }
+
+            .product-card {
+                width: 180px;
+                height: 180px;
+            }
+
+            .product-card img {
+                height: 120px;
+                padding: 12px;
+            }
+
+            .accessories-section {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .accessory-item img {
+                height: 130px;
+            }
+
+            .accessory-item .item-name {
+                font-size: 0.85rem;
+            }
+
+            .dropdown-section {
+                width: calc(100% - 30px);
+                margin: 25px 15px 50px 15px;
+                padding: 20px;
+            }
+
+            .dropdown-content {
+                gap: 30px;
+                margin-bottom: 25px;
+            }
+
+            .dropdown-bottom {
+                gap: 30px;
+                padding-top: 20px;
+            }
+
+            .anode-options {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .frame-diagrams {
+                gap: 12px;
+            }
+
+            .frame-diagram {
+                padding: 12px;
+            }
+
+            .frame-diagram img {
+                height: 200px;
+            }
+
+            .shop-samples-buttons {
+                gap: 15px;
+            }
+
+            .shop-sample-btn {
+                font-size: 0.95rem;
+                padding: 10px 24px;
+            }
+
+            .configurator-section {
+                padding: 60px 30px;
+                margin: 50px auto;
+            }
+
+            .configurator-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .configurator-section .intro {
+                font-size: 1.05rem;
+            }
+
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.05rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .shop-sample-btn {
+                width: 100%;
+                flex: none;
+            }
+
+            .shop-samples-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .subsection-title {
+                font-size: 1.5rem;
+                margin: 35px auto 20px;
+            }
+
+            .product-grid {
+                gap: 12px;
+                padding: 0 10px;
+            }
+
+            .product-card {
+                width: 160px;
+                height: 170px;
+            }
+
+            .product-card img {
+                height: 110px;
+                padding: 10px;
+            }
+
+            .product-name {
+                font-size: 0.85rem;
+            }
+
+            .accessories-section {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .accessory-item img {
+                height: 120px;
+            }
+
+            .accessory-item .item-name {
+                font-size: 0.8rem;
+            }
+
+            .dropdown-section {
+                width: calc(100% - 20px);
+                margin: 20px 10px 40px 10px;
+                padding: 15px;
+            }
+
+            .dropdown-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .dropdown-bottom {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-section h3,
+            .info-section h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                padding-bottom: 8px;
+            }
+
+            .gallery-main {
+                min-height: 280px;
+            }
+
+            .gallery-main img {
+                max-height: 300px;
+            }
+
+            .anode-col .anode-options {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .specs-anode-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-bottom: 25px;
+            }
+
+            .anode-col {
+                max-width: 100%;
+            }
+
+            .frame-diagrams-section h3,
+            .anode-section-bottom h3,
+            .shop-samples-section h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                padding-bottom: 8px;
+            }
+
+            .frame-diagrams {
+                gap: 10px;
+            }
+
+            .frame-diagram {
+                padding: 10px;
+            }
+
+            .frame-diagram img {
+                height: 160px;
+            }
+
+            .anode-options {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+
+            .anode-option {
+                padding: 10px 6px;
+                min-height: 80px;
+            }
+
+            .anode-option .anode-sample {
+                width: 45px;
+                height: 45px;
+            }
+
+            .anode-option .option-name {
+                font-size: 0.75rem;
+                height: 28px;
+            }
+
+            .frames-section {
+                margin: 0 auto 50px;
+            }
+
+            .configurator-section {
+                padding: 50px 25px;
+                margin: 40px auto;
+            }
+
+            .configurator-section h1 {
+                font-size: 2rem;
+            }
+
+            .configurator-section .intro {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .cta-button {
+                padding: 16px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 8px;
+            }
+
+            .intro-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin: 0 auto 40px;
+                text-align: center;
+            }
+
+            .intro-image img {
+                max-width: 100%;
+                height: 200px;
+            }
+
+            .section-header {
+                margin: 30px auto 25px;
+                padding: 0 8px;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .subsection-title {
+                font-size: 1.3rem;
+                margin: 30px auto 15px;
+                padding-left: 8px;
+            }
+
+            .product-grid {
+                gap: 8px;
+                padding: 0 8px;
+            }
+
+            .product-card {
+                width: calc(50vw - 20px);
+                min-width: 140px;
+                max-width: 180px;
+                height: 160px;
+            }
+
+            .product-card img {
+                height: 100px;
+                padding: 8px;
+            }
+
+            .product-name {
+                font-size: 0.8rem;
+            }
+
+            .product-info {
+                padding: 8px 10px 10px;
+            }
+
+            .accessories-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 12px 8px;
+            }
+
+            .accessory-item img {
+                height: 110px;
+            }
+
+            .accessory-item .item-name {
+                font-size: 0.75rem;
+                line-height: 1.6;
+            }
+
+            .dropdown-section {
+                width: calc(100% - 16px);
+                margin: 15px 8px 30px 8px;
+                padding: 12px;
+                border-radius: 6px;
+            }
+
+            .dropdown-content {
+                gap: 20px;
+                margin-bottom: 15px;
+            }
+
+            .dropdown-bottom {
+                gap: 20px;
+                padding-top: 15px;
+            }
+
+            .gallery-section h3,
+            .info-section h3 {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+                padding-bottom: 6px;
+            }
+
+            .gallery-main {
+                min-height: 250px;
+            }
+
+            .gallery-main img {
+                max-height: 280px;
+            }
+
+            .gallery-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+
+            .gallery-nav.prev {
+                left: 10px;
+            }
+
+            .gallery-nav.next {
+                right: 10px;
+            }
+
+            .gallery-counter {
+                bottom: 10px;
+                right: 10px;
+                padding: 4px 8px;
+                font-size: 0.75rem;
+            }
+
+            .anode-col .anode-options {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .frame-diagrams-section h3,
+            .anode-section-bottom h3,
+            .shop-samples-section h3 {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+                padding-bottom: 6px;
+            }
+
+            .frame-diagrams {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .frame-diagram {
+                padding: 8px;
+            }
+
+            .frame-diagram img {
+                height: 200px;
+                width: 100%;
+            }
+
+            .frame-diagram h5 {
+                font-size: 0.8rem;
+            }
+
+            .anode-options {
+                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                gap: 8px;
+            }
+
+            .anode-option {
+                padding: 8px 4px;
+                min-height: 75px;
+            }
+
+            .anode-option .anode-sample {
+                width: 40px;
+                height: 40px;
+            }
+
+            .anode-option .option-name {
+                font-size: 0.7rem;
+                height: 24px;
+            }
+
+            .shop-samples-buttons {
+                gap: 8px;
+            }
+
+            .shop-sample-btn {
+                font-size: 0.85rem;
+                padding: 10px 16px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .info-box {
+                padding: 12px;
+            }
+
+            .info-box p {
+                font-size: 0.9rem;
+            }
+
+            .specs-list li {
+                font-size: 0.85rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .frames-section {
+                margin: 0 auto 40px;
+            }
+
+            .zoom-modal-content {
+                max-width: 95%;
+                max-height: 95%;
+                padding: 15px;
+            }
+
+            .zoom-modal-close {
+                top: -40px;
+                right: -20px;
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .zoom-modal-info {
+                bottom: -40px;
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+
+            .hidden-phone {
+                display: none;
+            }
+
+            .configurator-section {
+                padding: 30px 15px;
+                margin: 30px auto;
+            }
+
+            .configurator-section .dir {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            .configurator-section h1 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .configurator-section .intro {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* CRITICAL: Extended media query for iPhone 12 Pro and similar devices */
+        @media (max-width: 390px) {
+            .container {
+                padding: 0 5px;
+            }
+
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+
+            .subsection-title {
+                font-size: 1.2rem;
+                margin: 25px auto 12px;
+                padding-left: 5px;
+            }
+
+            .product-grid {
+                gap: 6px;
+                padding: 0 5px;
+            }
+
+            .product-card {
+                width: calc(50vw - 15px);
+                min-width: 120px;
+                max-width: 150px;
+                height: 150px;
+            }
+
+            .product-card img {
+                height: 90px;
+                padding: 6px;
+            }
+
+            .product-name {
+                font-size: 0.75rem;
+            }
+
+            .accessories-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                padding: 8px 5px;
+            }
+
+            .accessory-item img {
+                height: 90px;
+            }
+
+            .accessory-item .item-name {
+                font-size: 0.7rem;
+            }
+
+            .dropdown-section {
+                width: calc(100% - 10px);
+                margin: 10px 5px 25px 5px;
+                padding: 8px;
+            }
+
+            .dropdown-content {
+                gap: 15px;
+                margin-bottom: 12px;
+            }
+
+            .dropdown-bottom {
+                gap: 15px;
+                padding-top: 12px;
+            }
+
+            .gallery-section h3,
+            .info-section h3 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+            }
+
+            .gallery-main {
+                min-height: 200px;
+            }
+
+            .gallery-main img {
+                max-height: 220px;
+            }
+
+            .frame-diagrams-section h3,
+            .anode-section-bottom h3,
+            .shop-samples-section h3 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+            }
+
+            .frame-diagram img {
+                height: 180px;
+            }
+
+            .anode-options {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+            }
+
+            .anode-option {
+                padding: 6px 3px;
+                min-height: 70px;
+            }
+
+            .anode-option .anode-sample {
+                width: 35px;
+                height: 35px;
+            }
+
+            .anode-option .option-name {
+                font-size: 0.65rem;
+                height: 22px;
+            }
+
+            .shop-sample-btn {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+
+            .info-box {
+                padding: 8px;
+            }
+
+            .info-box p {
+                font-size: 0.85rem;
+            }
+
+            .specs-list li {
+                font-size: 0.8rem;
+                padding: 4px 0;
+            }
+
+            .frames-section {
+                margin: 0 auto 30px;
+            }
+
+            .configurator-section {
+                padding: 25px 10px;
+                margin: 25px auto;
+            }
+
+            .configurator-section .dir {
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+            }
+
+            .configurator-section h1 {
+                font-size: 1.6rem;
+                margin-bottom: 12px;
+            }
+
+            .configurator-section .intro {
+                font-size: 0.9rem;
+                margin-bottom: 18px;
+            }
+
+            .cta-button {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Extra safety for very small screens */
+        @media (max-width: 320px) {
+            .product-card {
+                width: calc(100vw - 30px);
+                max-width: 280px;
+            }
+
+            .anode-options {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .accessories-section {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-sample-btn {
+                font-size: 0.75rem;
+                padding: 8px 10px;
+            }
+        }
+
+        /* Ensure all elements have proper constraints */
+        .accessories-section,
+        .frame-diagrams,
+        .frame-diagram,
+        .gallery-section,
+        .info-section {
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .frame-diagram img,
+        .gallery-main img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contentPage">
+        <div class="container">
+            <!-- Styles Section -->
+            <!-- <div id="Styles" class="section-header">
+                <h2>Aluminum Frame Styles</h2>
+            </div> -->
+
+            <h3 class="subsection-title">Wide Frames</h3>
+            <div class="product-grid" id="wide-frames-grid">
+                <div class="product-card" data-frame="vivaro" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/vivaro11-768x482.jpg" alt="Vivaro Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">VIVARO</h5>
+                    </div>
+                </div>
+                <div class="product-card" data-frame="modena" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/modenaProfile.png" alt="Modena Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">MODENA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="corleone" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/corleoneProfile.png" alt="Corleone Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">CORLEONE</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="imola" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/imolaProfile.png" alt="Imola Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">IMOLA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="palio" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/palioProfile.png" alt="Palio Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">PALIO</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="siena" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/sienaProfile.png" alt="Siena Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">SIENA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="pisa" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/pisaProfile.png" alt="Pisa Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">PISA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="modena007" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/modena007Profile.png" alt="Modena 077 Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">MODENA 077</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="corleone877" onclick="toggleDropdown(this, 'wide-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/corleone877Profile.png" alt="Corleone 877 Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">CORLEONE 877</h5>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Narrow Frames</h3>
+            <div class="product-grid" id="narrow-frames-grid">
+                <div class="product-card" data-frame="brw" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/brwProfile.png" alt="BRW Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">BRW</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="verona" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/veronaProfile.png" alt="Verona Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">VERONA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="rocca" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/roccaProfile.png" alt="Rocca Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">ROCCA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="asti" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/astiProfile.png" alt="Asti Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">ASTI</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="roma" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/romaProfile.png" alt="Roma Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">ROMA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="veronaAir" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/veronaAirProfile.png" alt="Verona Air Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">VERONA AIR</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="varna" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/varnaProfile.png" alt="Varna Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">VARNA</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="rimini" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/riminiProfile.png" alt="Rimini Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">RIMINI</h5>
+                    </div>
+                </div>
+
+                <div class="product-card" data-frame="divider" onclick="toggleDropdown(this, 'narrow-frames-grid')">
+                    <img src="https://www.cronosdesign.com/i/dividersProfile.png" alt="Dividers Profile" />
+                    <div class="product-info">
+                        <h5 class="product-name">DIVIDERS</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="zoom-modal" class="zoom-modal" onclick="closeZoomModal()">
+        <div class="zoom-modal-content" onclick="event.stopPropagation()">
+            <img id="zoom-modal-image" class="zoom-modal-image" alt="" onclick="closeZoomModal()" />
+            <div id="zoom-modal-info" class="zoom-modal-info">Click outside or press ESC to close</div>
+        </div>
+    </div>
+    <script>
+        const frameData = {
+            vivaro: {
+                name: 'VIVARO',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4467",
+                description: 'A Modern Take on Classic Shaker Style, Showcasing the Most Aluminum of Any of Our Frames. Made to your dimensions and specifications for easy installation',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/vivaroFacePic.jpg',
+                    'https://www.cronosdesign.com/i/Vivaro-aluminum-frame.jpg',
+                    'https://www.cronosdesign.com/i/vivaroPic2.jpeg',
+                    'https://www.cronosdesign.com/i/vivaroGP2.png',
+                    'https://www.cronosdesign.com/i/vivaroGP1.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/vivaro-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/vivaroFramePictureSch1.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Chrome', image: 'https://www.cronosdesign.com/i/chromeFrame.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Brushed Gold', image: 'https://www.cronosdesign.com/i/brushedGoldFrame.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'Brushed Bronze', image: 'https://www.cronosdesign.com/i/brushedBronzeFrame.jpg' },
+                    { name: 'White Matte', image: 'https://www.cronosdesign.com/i/matteWhiteFrame.jpg' },
+                    { name: 'White Glossy', image: 'https://www.cronosdesign.com/i/whiteGlossy.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            palio: {
+                name: 'PALIO',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4475",
+                description: 'Classic Rectangular Frame with Inset Detail, Reversed Siena Design.',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/palioFacePic.jpg',
+                    'https://www.cronosdesign.com/i/palio3.jpg',
+                    'https://www.cronosdesign.com/i/palio11.jpg',
+                    'https://www.cronosdesign.com/i/palioGP2.png',
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/palio-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/palioGP1.png' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' }
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            siena: {
+                name: 'SIENA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4476",
+                description: 'Rectangular Frame with Slanted Accent, Reversed Palio Design.',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/sienaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/siena2.jpg',
+                    'https://www.cronosdesign.com/i/siena11-768x482.jpg'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/siena-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/Siena12.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' }
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            imola: {
+                name: 'IMOLA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4477",
+                description: 'Effortlessly Frameless, with Stunningly Polished Glass Edges',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/sienaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/imola22.jpg',
+                    'https://www.cronosdesign.com/i/imola2.jpg',
+                    'https://www.cronosdesign.com/i/imolaGP2.png',
+                    'https://www.cronosdesign.com/i/imolaGP3.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/imola-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/imolaGP1.png' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'White Matte', image: 'https://www.cronosdesign.com/i/matteWhiteFrame.jpg' },
+                    { name: 'White Glossy', image: 'https://www.cronosdesign.com/i/whiteGlossy.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            pisa: {
+                name: 'PISA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4474",
+                description: 'Crafted for a Frameless Appearance, featuring a Subtly Protective Aluminum Edge',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/pisaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/Pisa1.jpg'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/pisa-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/Pisa-w-Red-Glass.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'White Matte', image: 'https://www.cronosdesign.com/i/matteWhiteFrame.jpg' },
+                    { name: 'White Glossy', image: 'https://www.cronosdesign.com/i/whiteGlossy.jpg' },
+                    { name: 'Brown Matte', image: 'https://www.cronosdesign.com/i/mochaFrame.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+
+            modena: {
+                name: 'MODENA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4472",
+                description: 'A Wide Frame Ideal for Larger Cabinets and Closets, with a Slightly Larger Reveal than the Verona',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/modenaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/modenaIntroPic1.png',
+                    'https://www.cronosdesign.com/i/SAS077_uj.jpg',
+                    'https://www.cronosdesign.com/i/modenaGP1.png',
+                    'https://www.cronosdesign.com/i/modenaGP3.png',
+                    'https://www.cronosdesign.com/i/modena2.jpg',
+                    'https://www.cronosdesign.com/i/modenaGP4.png',
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/modena-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/modenaGP2.png' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Black Brushed', image: 'https://www.cronosdesign.com/i/blackBrushed.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Brushed Bronze', image: 'https://www.cronosdesign.com/i/brushedBronzeFrame.jpg' }
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            modena007: {
+                name: 'MODENA 077',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4472",
+                description: 'Ideal for Larger Cabinets and Closets, Modena Features a Wider Frame and a Slightly Larger Reveal Compared to the Verona',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/modenaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/modenaIntroPic1.png',
+                    'https://www.cronosdesign.com/i/SAS077_uj.jpg',
+                    'https://www.cronosdesign.com/i/modenaGP1.png',
+                    'https://www.cronosdesign.com/i/modenaGP3.png',
+                    'https://www.cronosdesign.com/i/modena2.jpg',
+                    'https://www.cronosdesign.com/i/modenaGP4.png',
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/modena-007-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/modena2.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Graphite', image: 'https://www.cronosdesign.com/i/graphite.jpg' },
+                    { name: 'Matte White', image: 'https://www.cronosdesign.com/i/matteWhiteFrame.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            corleone: {
+                name: 'Corleone',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4470",
+                description: "A Minimal Reveal on the Frame's Face Creates a Sleek and Contemporary Appearance",
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '60" (1524mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/corleoneFacePic.jpg',
+                    'https://www.cronosdesign.com/i/corleoneIntroPic.png',
+                    'https://www.cronosdesign.com/i/Corleone4.jpg',
+                    'https://www.cronosdesign.com/i/corleoneGP2.png',
+                    'https://www.cronosdesign.com/i/corleoneGP3.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/corleone-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/corleoneGP1.png' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' }
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            corleone877: {
+                name: 'Corleone 877',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4470",
+                description: "Ideal for Larger Cabinets and Closets, Modena Features a Wider Frame and a Slightly Larger Reveal Compared to the Verona",
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'standard 35mm cup screw-on',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/corleoneFacePic.jpg',
+                    'https://www.cronosdesign.com/i/SAS077_uj.jpg',
+                    'https://www.cronosdesign.com/i/modena11-768x482.jpg',
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/modena-007-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/modena2.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' }
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/wide-hinge-blum.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            brw: {
+                name: 'BRW',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4479",
+                description: 'A Narrow Frame for a Sleek, Squared Look',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Narrow Frame Hinge.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/brwProfile.png',
+                    'https://www.cronosdesign.com/i/brw1.jpg',
+                    'https://www.cronosdesign.com/i/brwGP2.png',
+                    'https://www.cronosdesign.com/i/brwGP3.png',
+                    'https://www.cronosdesign.com/i/brwGP4.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/brw-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/brwFrameIntro1.jpeg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Brushed Aluminum', image: 'https://www.cronosdesign.com/i/brushedAluminum.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Black Brushed', image: 'https://www.cronosdesign.com/i/blackBrushed.jpg' },
+                    { name: 'Gold Champagne', image: 'https://www.cronosdesign.com/i/lightBronze.jpg' },
+                    { name: 'Brushed Bronze', image: 'https://www.cronosdesign.com/i/brushedBronze.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'Gold Brushed', image: 'https://www.cronosdesign.com/i/brushedGoldFrame.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Chrome', image: 'https://www.cronosdesign.com/i/chromeFrame.jpg' },
+                    { name: 'Graphite', image: 'https://www.cronosdesign.com/i/graphite.jpg' },
+                    { name: 'Brown Matte', image: 'https://www.cronosdesign.com/i/mochaFrame.jpg' },
+                    { name: 'White Matte', image: 'https://www.cronosdesign.com/i/matteWhiteFrame.jpg' },
+                    { name: 'White Glossy', image: 'https://www.cronosdesign.com/i/whiteGlossy.jpg' },
+                    { name: 'Acier Gratta', image: 'https://www.cronosdesign.com/i/acierGratta.png' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            verona: {
+                name: 'VERONA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4481",
+                description: 'Narrow Frame with a Subtle Face Reveal for a Sleek and Stylish Appearance',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Narrow Frame Hinge.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/veronaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/veronaGP3.png',
+                    'https://www.cronosdesign.com/i/veronaGP4.png',
+                    'https://www.cronosdesign.com/i/Verona-Champagne.jpg',
+                    'https://www.cronosdesign.com/i/verona-3.jpg'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/verona-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/veronaGP2.png' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Brushed Aluminum', image: 'https://www.cronosdesign.com/i/brushedAluminum.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Black Glossy', image: 'https://www.cronosdesign.com/i/glossyBlack.jpg' },
+                    { name: 'Brown Matte', image: 'https://www.cronosdesign.com/i/mochaFrame.jpg' },
+                    { name: 'Gold Champagne', image: 'https://www.cronosdesign.com/i/lightBronze.jpg' },
+                    { name: 'Brushed Bronze', image: 'https://www.cronosdesign.com/i/brushedBronze.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'Gold Brushed', image: 'https://www.cronosdesign.com/i/brushedGoldFrame.jpg' },
+                    { name: 'Acier Gratta', image: 'https://www.cronosdesign.com/i/acierGratta.png' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            rocca: {
+                name: 'ROCCA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4478",
+                description: 'Combines the Squared Look of the BRW with a Distinctive Stepped Detail',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Narrow Frame Hinge.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/roccaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/roccaGP1.png',
+                    'https://www.cronosdesign.com/i/rocca-intro-3.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/rocca-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/Rocca4.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Brushed Aluminum', image: 'https://www.cronosdesign.com/i/brushedAluminum.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Black Glossy', image: 'https://www.cronosdesign.com/i/glossyBlack.jpg' },
+                    { name: 'Brown Matte', image: 'https://www.cronosdesign.com/i/mochaFrame.jpg' },
+                    { name: 'Gold Champagne', image: 'https://www.cronosdesign.com/i/lightBronze.jpg' },
+                    { name: 'Brushed Bronze', image: 'https://www.cronosdesign.com/i/brushedBronze.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'Gold Brushed', image: 'https://www.cronosdesign.com/i/brushedGoldFrame.jpg' },
+                    { name: 'Acier Gratta', image: 'https://www.cronosdesign.com/i/acierGratta.png' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            asti: {
+                name: 'ASTI',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4563",
+                description: 'A Narrow Frame Available in a Variety of RAL Colors, Adding Customizable Style',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Narrow Frame Hinge.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/astiFacePic.jpg',
+                    'https://www.cronosdesign.com/i/asti-picture-1.jpg',
+                    'https://www.cronosdesign.com/i/asti-picture-2.jpg'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/asti-diagram.jpg' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/astiCoverPicture1.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Matte Graphite Ral 7021', image: 'https://www.cronosdesign.com/i/brushedAluminum.jpg' },
+
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            roma: {
+                name: 'ROMA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/?Texts=1356_4562",
+                description: 'A narrow frame with a subtle face reveal, creating a slim and stylish aesthetic.',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Salice Air Concealed.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/romaFacePic.jpg',
+                    'https://www.cronosdesign.com/i/romaShelfBP1.jpg',
+                    'https://www.cronosdesign.com/i/romaBlackProfile.jpg'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/romaDoubleDiagramHorizontalUPD1.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/romaProfilePic1.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Gold Champagne', image: 'https://www.cronosdesign.com/i/lightBronze.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Salice Air Hinge', image: 'https://www.cronosdesign.com/i/RomaWithHinges2.png', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            veronaAir: {
+                name: 'VERONA AIR',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/",
+                description: 'A narrow frame featuring a subtle face reveal, offering a sleek appearance',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Salice Air Concealed.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Handle and lock borings available upon request or you can choose hardware from our selection. Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/verona%20air%20gallery%20pics3.jpg',
+                    'https://www.cronosdesign.com/i/rocca-intro-3.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/veronaAirDiagramUpdat.jpeg' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/verona-black-3.jpg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Brown Metallic', image: 'https://www.cronosdesign.com/i/graphite.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Salice Air Hinge', image: 'https://www.cronosdesign.com/i/RomaWithHinges2.png', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            varna: {
+                name: 'VARNA',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/",
+                description: 'A unique frame available exclusively in combination with Rocca, Siena, and Palio profiles',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Cannot be hinged.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/varna-intro.jpg',
+                    'https://www.cronosdesign.com/i/rocca-intro-3.png'
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/varna-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/varnaIntroPic2.jpeg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Brushed Aluminum', image: 'https://www.cronosdesign.com/i/brushedAluminum.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' },
+                    { name: 'Black Glossy', image: 'https://www.cronosdesign.com/i/glossyBlack.jpg' },
+                    { name: 'Brown Matte', image: 'https://www.cronosdesign.com/i/mochaFrame.jpg' },
+                    { name: 'Gold Champagne', image: 'https://www.cronosdesign.com/i/lightBronze.jpg' },
+                    { name: 'Brushed Bronze', image: 'https://www.cronosdesign.com/i/brushedBronze.jpg' },
+                    { name: 'Brushed Stainless Steel', image: 'https://www.cronosdesign.com/i/brushedStainlessSteel.jpg' },
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                    { name: 'Gold Brushed', image: 'https://www.cronosdesign.com/i/brushedGoldFrame.jpg' },
+                    { name: 'Acier Gratta', image: 'https://www.cronosdesign.com/i/acierGratta.png' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            <!-- COME BACK TO THIS -->
+            rimini: {
+                name: 'RIMINI',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/",
+                description: 'A thin frame designed for minimal framing, not supporting hinges',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Hinges': 'Cannot be hinged.',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/riminiFacePic.jpg',
+                    'https://www.cronosdesign.com/i/rimini-intro.jpg',
+                    'https://www.cronosdesign.com/i/riminiGP1.png',
+                    'https://www.cronosdesign.com/i/riminiGP2.png',
+                    'https://www.cronosdesign.com/i/riminiGP3.png',
+                    'https://www.cronosdesign.com/i/riminiIntroPicture3.jpeg',
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/rimini-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/riminiIntroPic1.jpeg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' }, ,
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+            divider: {
+                name: 'DIVIDERS',
+                shopLink: "https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/",
+                description: 'Serve to enhance aesthetic appeal, and allow for functional segmentation',
+                specs: {
+                    'Frame Insert Thickness': '5/32" (4mm)',
+                    'Maximum width & height': '98" (2489mm)',
+                    'Minimum width & height': '5.5" (140mm)'
+                },
+                additionalText: 'Custom frame finishes available in <a href=\'https://alumprofile.com/ral-color-chart\'>RAL colors</a>',
+                gallery: [
+                    'https://www.cronosdesign.com/i/dividersFacePic.jpg',
+                    'https://www.cronosdesign.com/i/Aluminum-Divider-for-Glass-Doors-2.jpg',
+                    'https://www.cronosdesign.com/i/divider-1.jpg',
+                    'https://www.cronosdesign.com/i/divider-2.jpg',
+                    'https://www.cronosdesign.com/i/dividersGP1.png',
+
+                ],
+                diagrams: [
+                    { name: '', image: 'https://www.cronosdesign.com/i/divider-sch.png' },
+                    { name: '', image: 'https://www.cronosdesign.com/i/dividerIntroPicture.jpeg' }
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' },
+                    { name: 'Black Matte', image: 'https://www.cronosdesign.com/i/blackMatteFrame.jpg' }, ,
+                    { name: 'Gold Matte', image: 'https://www.cronosdesign.com/i/goldFrame.jpg' },
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://alumprofile.com/accessories/door-inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://alumprofile.com/accessories/hinges' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://alumprofile.com/cabinet-doors/accessories/handles' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://alumprofile.com/accessories/aventos-lift-up-systems' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://alumprofile.com/sliding-doors/sliding-door-systems' },
+                ],
+            },
+        };
+
+        let currentActiveCard = null;
+        let currentDropdown = null;
+        let currentGalleryImages = [];
+
+        function changeGalleryImage(index) {
+            const mainImage = document.getElementById('gallery-main-image');
+            const dots = document.querySelectorAll('.gallery-dot');
+            const galleryMain = document.querySelector('.gallery-main');
+            const currentImageNumber = document.getElementById('current-image-number');
+
+            if (!mainImage || !galleryMain || !currentImageNumber || !currentGalleryImages[index]) {
+                console.warn('Gallery elements not found or invalid index');
+                return;
+            }
+
+            mainImage.src = currentGalleryImages[index];
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+
+            galleryMain.setAttribute('data-current-image', index);
+            currentImageNumber.textContent = index + 1;
+        }
+
+        function nextImage() {
+            const galleryMain = document.querySelector('.gallery-main');
+            if (!galleryMain) return;
+
+            const currentIndex = parseInt(galleryMain.getAttribute('data-current-image')) || 0;
+            const totalImages = parseInt(galleryMain.getAttribute('data-total-images')) || currentGalleryImages.length;
+            const nextIndex = (currentIndex + 1) % totalImages;
+            changeGalleryImage(nextIndex);
+        }
+
+        function previousImage() {
+            const galleryMain = document.querySelector('.gallery-main');
+            if (!galleryMain) return;
+
+            const currentIndex = parseInt(galleryMain.getAttribute('data-current-image')) || 0;
+            const totalImages = parseInt(galleryMain.getAttribute('data-total-images')) || currentGalleryImages.length;
+            const prevIndex = currentIndex === 0 ? totalImages - 1 : currentIndex - 1;
+            changeGalleryImage(prevIndex);
+        }
+
+        function toggleDropdown(card, sectionType) {
+            const frameKey = card.getAttribute('data-frame');
+            const frameInfo = frameData[frameKey] || getDefaultFrameData(card.querySelector('.product-name').textContent);
+
+            currentGalleryImages = frameInfo.gallery;
+
+            if (currentActiveCard === card && currentDropdown) {
+                closeDropdown();
+                return;
+            }
+
+            if (currentDropdown) {
+                closeDropdown();
+            }
+
+            document.querySelectorAll('.product-card').forEach(c => c.classList.remove('active'));
+
+            card.classList.add('active');
+            currentActiveCard = card;
+
+            const dropdown = createDropdown(frameInfo);
+            currentDropdown = dropdown;
+
+            const productGrid = card.closest('.product-grid');
+            if (!productGrid) {
+                console.error('Could not find product grid container');
+                return;
+            }
+
+            if (productGrid.parentNode) {
+                productGrid.parentNode.insertBefore(dropdown, productGrid.nextSibling);
+
+                setTimeout(() => {
+                    dropdown.classList.add('active');
+                    dropdown.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 10);
+            } else {
+                console.error('Could not find parent element to insert dropdown');
+            }
+        }
+
+        function createDropdown(frameInfo) {
+            const dropdown = document.createElement('div');
+            dropdown.className = 'dropdown-section';
+
+            dropdown.innerHTML = `
+      <button class="close-btn" onclick="closeDropdown()">×</button>
+      <div class="dropdown-content">
+        <div class="gallery-section">
+          <h3>${frameInfo.name}</h3>
+          <div class="gallery-carousel">
+            <div class="gallery-main" data-current-image="0" data-total-images="${frameInfo.gallery.length}">
+              <button class="gallery-nav prev" onclick="previousImage()" aria-label="Previous image">‹</button>
+              <img src="${frameInfo.gallery[0]}" alt="${frameInfo.name} Gallery" id="gallery-main-image" class="zoomable" onclick="openZoomModal(this)" />
+              <button class="gallery-nav next" onclick="nextImage()" aria-label="Next image">›</button>
+              <div class="gallery-counter">
+                <span id="current-image-number">1</span> / <span id="total-images">${frameInfo.gallery.length}</span>
+              </div>
+            </div>
+            <div class="gallery-dots">
+              ${frameInfo.gallery.map((img, index) => `
+                <div class="gallery-dot ${index === 0 ? 'active' : ''}" onclick="changeGalleryImage(${index})"></div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+        <div class="info-section">
+          <h3>Product Information</h3>
+          <div class="info-box">
+            <p>${frameInfo.description}</p>
+            <div class="specs">
+              <h5>Specifications</h5>
+              <ul class="specs-list">
+                ${Object.entries(frameInfo.specs).map(([key, value]) => `
+                  <li>
+                    <span>${key}:</span>
+                    <span>${value}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+            ${frameInfo.additionalText ? `<div class="additional-text-below">${frameInfo.additionalText}</div>` : ''}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-bottom specs-anode-grid">
+        <div class="specs-col">
+          <div class="frame-diagrams-section">
+            <h3>Frame Specifications</h3>
+            <div class="frame-diagrams">
+              ${frameInfo.diagrams.map(diagram => `
+                <div class="frame-diagram">
+                  <img src="${diagram.image}" alt="${diagram.name}" onclick="openZoomModal(this)" />
+                  <h5>${diagram.name}</h5>
+                </div>
+              `).join('')}
+            <div class="hinge-info-button" style="margin-top:20px; text-align:center;">
+                <a href="https://alumprofile.com/boring-specs" class="shop-sample-btn">Hinge and Handle Borings Information</a>
+            </div>
+            </div>
+          </div>
+          <div class="shop-samples-section" style="margin-top: 28px;">
+            <h3>Shop</h3>
+            <div class="shop-samples-buttons">
+              <a href="${frameInfo.shopLink}" class="shop-sample-btn">Frame Samples</a>
+              <a href="https://www.cronosdesign.com/en/shop/samples/glass-samples/" class="shop-sample-btn">Glass Samples</a>
+              <a href="https://doordesignonline.com/" class="shop-sample-btn">Configurator</a>
+              <a href="https://alumprofile.com/get-quote/" class="shop-sample-btn">Get Quote</a>
+            </div>
+          </div>
+        </div>
+        <div class="anode-section-bottom anode-col">
+          <h3>Anode Finish Options</h3>
+          <div class="anode-options">
+            ${frameInfo.anodeOptions.map((option, index) => `
+              <div class="anode-option">
+                <img src="${option.image}" alt="${option.name} finish" class="anode-sample zoomable" onclick="openZoomModal(this)"  />
+                <div class="option-name">${option.name}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+        <h3 class="accessory-title">Accessories</h3>
+        <div class="accessories-section">
+            ${frameInfo.accessories.map((option, index) => `
+            <div class="accessory-item">
+                <a href="${option.link}" target="_blank" class="accessory-link">
+                    <img src="${option.image}" alt="${option.name} accessory" class="accessory-sample" />
+                    <div class="item-name">${option.name}</div>
+                </a>
+            </div>
+            `).join('')}
+        </div>
+    `;
+
+            return dropdown;
+        }
+
+        function getDefaultFrameData(name) {
+            return {
+                name: name,
+                description: `The ${name} profile offers excellent quality and design for modern cabinet applications.`,
+                specs: {
+                    'Frame Width': '35-45mm',
+                    'Material': 'Aluminum Alloy',
+                    'Finish': 'Anodized',
+                    'Glass Thickness': '4-6mm',
+                    'Installation': 'Standard Hinges'
+                },
+                gallery: ['https://via.placeholder.com/400x300?text=Sample+Image'],
+                diagrams: [
+                    { name: '', image: 'https://via.placeholder.com/300x300?text=Diagram' }
+                ],
+                accessories: [
+                    { name: 'Inserts', image: 'https://www.cronosdesign.com/i/glassInsertsPictureHO.jpg', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                    { name: 'Hinges', image: 'https://www.cronosdesign.com/i/hingesNarrowPictureHO1.jpg', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                    { name: 'Handles', image: 'https://www.cronosdesign.com/i/handlesPictureHO.jpg', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                    { name: 'Lift Up Systems', image: 'https://www.cronosdesign.com/i/liftUpSystemsPictureHO.jpg', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                    { name: 'Sliding Hardware', image: 'https://www.cronosdesign.com/i/slidingHwSystemsPictureHO.jpg', link: 'https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/inserts/' },
+                ],
+                anodeOptions: [
+                    { name: 'Natural Aluminum', image: 'https://www.cronosdesign.com/i/naturalAluminumFrame.jpg' }
+                ]
+            };
+        }
+
+        function openZoomModal(imageElement) {
+            const modal = document.getElementById('zoom-modal');
+            const modalImage = document.getElementById('zoom-modal-image');
+
+            modalImage.src = imageElement.src;
+            modalImage.alt = imageElement.alt;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeZoomModal() {
+            const modal = document.getElementById('zoom-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('zoom-modal').addEventListener('click', function (event) {
+            if (event.target === this) {
+                closeZoomModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const modal = document.getElementById('zoom-modal');
+                if (modal.classList.contains('active')) {
+                    closeZoomModal();
+                }
+            }
+        });
+
+        function closeDropdown() {
+            if (currentDropdown && currentDropdown.parentNode) {
+                currentDropdown.remove();
+                currentDropdown = null;
+            }
+            if (currentActiveCard) {
+                currentActiveCard.classList.remove('active');
+                currentActiveCard = null;
+            }
+            document.querySelectorAll('.product-card').forEach(card => card.classList.remove('active'));
+        }
+    </script>
+
+</body>
+
+</html>

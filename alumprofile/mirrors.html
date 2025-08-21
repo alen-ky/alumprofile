@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Illuminated Mirrors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-strip">
+            <div class="product-card" data-product="round-cosmetic">
+                <img src="https://www.cronosdesign.com/i/round_line_cosm_fp.jpg" alt="Round Line Cosmetic"
+                    class="product-image">
+                <p class="product-name">Round Line Cosmetic</p>
+            </div>
+
+            <div class="product-card" data-product="cosmetic">
+                <img src="https://www.cronosdesign.com/i/cosm_line_fp.jpg" alt="Cosmetic Line" class="product-image">
+                <p class="product-name">Cosmetic Line</p>
+            </div>
+
+            <div class="product-card" data-product="smart">
+                <img src="https://www.cronosdesign.com/i/smartLineLighted1.jpg" alt="Smart Line" class="product-image">
+                <p class="product-name">Smart Line</p>
+            </div>
+
+            <div class="product-card" data-product="round">
+                <img src="https://www.cronosdesign.com/i/roundLine1.jpg" alt="Round Line" class="product-image">
+                <p class="product-name">Round Line</p>
+            </div>
+
+            <div class="product-card" data-product="modern">
+                <img src="https://www.cronosdesign.com/i/modernLine1.jpg" alt="Modern Line" class="product-image">
+                <p class="product-name">Modern Line</p>
+            </div>
+
+            <div class="product-card" data-product="gap">
+                <img src="https://www.cronosdesign.com/i/gapLine1.jpg" alt="Gap Line" class="product-image">
+                <p class="product-name">Gap Line</p>
+            </div>
+
+            <div class="product-card" data-product="smooth">
+                <img src="https://www.cronosdesign.com/i/smoothLine1.jpg" alt="Smooth Line" class="product-image">
+                <p class="product-name">Smooth Line</p>
+            </div>
+
+            <div class="product-card" data-product="shine">
+                <img src="https://www.cronosdesign.com/i/shineLine1.jpg" alt="Shine Line" class="product-image">
+                <p class="product-name">Shine Line</p>
+            </div>
+
+            <div class="product-card" data-product="simple">
+                <img src="https://www.cronosdesign.com/i/simpleLine1.jpg" alt="Simple Line" class="product-image">
+                <p class="product-name">Simple Line</p>
+            </div>
+
+            <div class="product-card" data-product="square">
+                <img src="https://www.cronosdesign.com/i/squareLine1.jpg" alt="Square Line" class="product-image">
+                <p class="product-name">Square Line</p>
+            </div>
+
+            <div class="product-card" data-product="oval">
+                <img src="https://www.cronosdesign.com/i/ovalLine1.jpg" alt="Oval Line" class="product-image">
+                <p class="product-name">Oval Line</p>
+            </div>
+
+            <div class="product-card" data-product="top">
+                <img src="https://www.cronosdesign.com/i/topLine1.jpg" alt="Top Line" class="product-image">
+                <p class="product-name">Top Line</p>
+            </div>
+
+            <div class="product-card" data-product="double">
+                <img src="https://www.cronosdesign.com/i/doubleLine1.jpg" alt="Double Line" class="product-image">
+                <p class="product-name">Double Line</p>
+            </div>
+
+            <div class="product-card" data-product="classic">
+                <img src="https://www.cronosdesign.com/i/classicLine1.jpg" alt="Classic Line" class="product-image">
+                <p class="product-name">Classic Line</p>
+            </div>
+
+        </div>
+
+        <div id="product-details" class="product-details">
+            <div class="dropdown-content">
+                <div class="gallery-wrapper">
+                    <h3 class="details-title" id="details-title"></h3>
+                    <button class="gallery-arrow left" aria-label="Previous image">&#8592;</button>
+                    <div class="details-gallery"></div>
+                    <button class="gallery-arrow right" aria-label="Next image">&#8594;</button>
+                    <div class="gallery-dots"></div>
+                </div>
+                <div class="details-text">
+                    <h3 class="details-title">Product Description</h3>
+                    <div class="details-description" id="details-description"></div>
+                </div>
+
+                <div class="standard-sizes-section">
+                    <h3 class="details-title">Standard Sizes</h3>
+                    <div class="standard-sizes-list" id="standard-sizes-list"></div>
+                    <p class="custom-sizes-note">Custom sizes are available upon request.</p>
+                </div>
+
+                <div class="available-finishes-section">
+                    <h3 class="details-title">Available Finishes</h3>
+                    <div class="finishes-grid"></div>
+                </div>
+
+                <ul class="details-specs" id="details-specs-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            'round-cosmetic': {
+                title: 'Round Line Cosmetic',
+                gallery: [
+                    'https://www.cronosdesign.com/i/round_line_cosm_p1.jpg',
+                    'https://www.cronosdesign.com/i/round-line-cosmetic-line-2.jpg'
+                ],
+                description: 'Have you seen a more perfect circle?\n\nWith ambient lighting and a frameless silhouette, the Round Line Cosmetic Mirror adds a warm touch to any space.\n\nThis frameless wall mirror seamlessly blends into any contemporary or Scandinavian-inspired space, while the touch-activated light adds effortless functionality.',
+                standardSizes: ['24" x 32"', '30" x 40"', '36" x 48"', '42" x 60"'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'cosmetic': {
+                title: 'Cosmetic Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/cosmetic-line-2.jpg',
+                    'https://www.cronosdesign.com/i/cosmetic-line-3.jpg',
+                ],
+                description: 'Start your day with a soft, radiant glow.\n\nPart of our Cosmetic Line, this rectangular LED mirror features built-in edge lighting that provides a gentle, even illumination. Ideal for daily rituals, or simply brightening up your space.',
+                standardSizes: ['25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                ],
+                specs: [],
+                shopUrl: "https://www.google.com"
+            },
+            'smart': {
+                title: 'Smart Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/smart%20line%201.jpg',
+                    'https://www.cronosdesign.com/i/smart-line-3.jpg',
+                ],
+                description: 'Unsurprisingly, the Smart Mirror isn\'t just beautiful-it\'s functional.\n\nDesigned with convenience in mind, this mirror features a built-in display in the lower right corner that keeps you effortlessly informed. Stay on top of your day with real-time updates on outdoor temperatures, local weather conditions (via Wi-Fi), and a clear date and time display to help you plan with ease.\n\nControl the built-in LED lighting with a simple wave of your hand—no buttons, no smudges. \n\nJust clean, modern functionality that fits into your routine. Smart, indeed.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'round': {
+                title: 'Round Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/round-line-p1.jpg.jpg',
+                    'https://www.cronosdesign.com/i/round-line-prem-2.jpg'
+                ],
+                description: 'This circular mirror features a crisp, integrated LED light that traces its outer edge, creating a clean halo effect. The soft glow provides balanced, forward-facing illumination that’s ideal for makeup, grooming, or simply brightening your space.\n\nSet against a minimalist backdrop, the mirror doubles as a design statement and a daily essential.\n\nChoose from three light tones—Warm, Neutral, or Cool—to suit any time of day or mood',
+                standardSizes: ['23.6"\n600mm', '31.5"\n800mm', '39.4"\n1000mm'],
+                finishes: [
+                    { name: 'Black Anode', src: 'https://www.cronosdesign.com/i/blackFinish.jpg', type: '' },
+                    { name: 'Gold Anode', src: 'https://www.cronosdesign.com/i/goldFinish.jpg', type: '' },
+                    { name: 'Powder Coated White RAL 9003', src: 'https://i.pinimg.com/236x/b8/c7/17/b8c7170dde98a2489b381938122d0ba1.jpg', type: '' }
+                ],
+                specs: []
+            },
+            'modern': {
+                title: 'Modern Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/modern-line.jpg',
+                    'https://www.cronosdesign.com/i/modern-line-2.jpg',
+                    'https://www.cronosdesign.com/i/modern-line-3.jpg',
+                ],
+                description: 'Sharp lines. Soft light. Total clarity.\n\nThis rectangular mirror is framed by a clean inner LED border, offering forward-facing illumination without harsh shadows.\n\nThe crisp lighting makes daily routines feel a little more refined. Available in Warm, Neutral, or Cool tones to match your space.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                    { name: 'Silver Anode', src: 'https://www.cronosdesign.com/i/alumFinish.jpg', type: 'Matte' },
+                ],
+                specs: []
+            },
+            'gap': {
+                title: 'Gap Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/gap-line.jpg',
+                    'https://www.cronosdesign.com/i/gap-line-2.jpg',
+                    'https://www.cronosdesign.com/i/gap-line-3.jpg',
+                ],
+                description: 'Our GAP line LED mirror provides a stylish classic design, with a modern/ contemporary touch. The symmetric lines of the mirror graciously floating inside the anodized or lacquered aluminum frame creates well balanced and stylish appearance. The mirror pane is illuminated from the inside of the frame, evenly diffusing indirect light with a subtle radiance.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                    { name: 'Silver Anode', src: 'https://www.cronosdesign.com/i/alumFinish.jpg', type: 'Matte' },
+                    { name: 'Powder Coated White RAL 9003', src: 'https://i.pinimg.com/236x/b8/c7/17/b8c7170dde98a2489b381938122d0ba1.jpg', type: '' }
+                ],
+                specs: []
+            },
+            'smooth': {
+                title: 'Smooth Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/smooth%20line.jpg',
+                    'https://www.cronosdesign.com/i/smooth-line-2.jpg',
+                    'https://www.cronosdesign.com/i/smooth-line-3.jpg',
+                ],
+                description: 'Smooth Line LED Mirror is a great choice for anyone looking for a forward-facing LED Light. The LED Strip outlines the front of the mirrors perimeter, making it perfect for shaving, hair styling, applying makeup, and adding additional light to your space. The mirror is illuminated by a single decorative LED line. No visible aluminum frame support creates clean and minimalistic look.',
+                standardSizes: ['23.6\" x 23.6\"\n600mm x 600mm', '31.5\" x 31.5\"\n800mm x 800mm', '31.5\" x 23.6\"\n800mm x 600mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'shine': {
+                title: 'Shine Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/shine-line.jpg',
+                    'https://www.cronosdesign.com/i/shine-line-2.jpg'
+                ],
+                description: 'Shine LED mirror line is distinguished by frosted/ sandblasted edge, evenly spreading the line around the perimeter of the mirror. The frosted edge back light creates an extra dimension to the space.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'simple': {
+                title: 'Simple Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/simple-line-mp.jpg',
+                    'https://www.cronosdesign.com/i/simple-line-2.jpg'
+                ],
+                description: 'Our Simple Line LED mirror provides a sleek and brilliant illumination whilst the clean crisp shapes created will enhance your bathroom\'s over-all design. This product has a protection rating of IP44, which makes it suitable for use in bathrooms and damp locations. It is so versatile that it can be mounted portrait or landscape to suit your basin choice. All four sides of the frame (on back) are pre-drilled for easy hanging.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'square': {
+                title: 'Square Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i.ashx?i=/i/squareLine.jpg&w=1244',
+                    'https://www.cronosdesign.com/i/square-line-2.jpg'
+                ],
+                description: 'Square Line is a unique mirror in a rectangular, carefully sanded glass gives lightness to any interior. The model with a very subtle, timeless design, attracts with its simplicity and, at the same time, original light decorativeness.The light is emitted from the border, creating a charming atmosphere.',
+                standardSizes: ['39.4\" x 47.2\"\n1000mm x 1200mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'oval': {
+                title: 'Oval Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/oval-line-p.jpg',
+                    'https://www.cronosdesign.com/i/oval-line-desc.jpg'
+                ],
+                description: 'Oval Premium is perfect for those who are looking for a forward-facing LED Light. The LED Strip is in the front of the mirror, making it perfect for shaving, hair styling, and applying makeup. It comes with the options to choose 3 light tones: Warm, Neutral, and Cool. The oval backlit mirror is designed with the LED lights outlining the back of its perimeter, providing ample light with a charming glow. The relaxing ambience will transform any room into an inviting and tranquil space, while giving you the functionality of a well-lit mirror.',
+                standardSizes: ['39.4\" x \"\n1000mm x 500mm'],
+                finishes: [
+                    { name: 'Black Anode', src: 'https://www.cronosdesign.com/i/blackFinish.jpg', type: '' },
+                    { name: 'Gold Anode', src: 'https://www.cronosdesign.com/i/goldFinish.jpg', type: '' },
+                    { name: 'Powder Coated White RAL 9003', src: 'https://i.pinimg.com/236x/b8/c7/17/b8c7170dde98a2489b381938122d0ba1.jpg', type: '' }
+                ],
+                specs: []
+            },
+            'top': {
+                title: 'Top Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i.ashx?i=/i/top-line1.png&w=1244',
+                    'https://www.cronosdesign.com/i/top-line-3.jpg'
+                ],
+                description: 'Top LED mirror line creates modern minimalistic design expression with the help of the eye-catching LED light lamp on the top of the mirror, flawlessly illuminating the mirror pane.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'double': {
+                title: 'Double Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/double-line-on-768x512.jpg',
+                    'https://www.cronosdesign.com/i/double-line-2.jpg'
+                ],
+                description: 'Our Double Line LED mirror is sophisticated, and practical. With two LED stripes, it provides a symmetrical look that is timeless. It is great for any modern or contemporary room.This product has a protection rating of IP44, which makes it suitable for use in bathrooms and damp locations. Unless specified, the mirror manufactured to be hanged/ mounted in a landscape (horizontal) position. For portrait mounted position – please request at the time of the order.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                ],
+                specs: []
+            },
+            'classic': {
+                title: 'Classic Line',
+                gallery: [
+                    'https://www.cronosdesign.com/i/classicLineCoverPic.jpg',
+                    'https://www.cronosdesign.com/i/classicLine1.jpg'
+                ],
+                description: 'Our Classic Line LED mirror provides a sleek, modern/contemporary look. The clean lines of the aluminum frame will enhance your bathrooms design by giving it a classic yet timeless modern fee.This product has a protection rating of IP44, which makes it suitable for use in bathrooms and damp locations. It is so versatile that it can be mounted portrait or landscape to suit your basin choice. All four sides of the frame (on back) are pre-drilled for easy hanging.',
+                standardSizes: ['25.6\" x 23.6\"\n 650mm x 600mm', '25.6\" x 31.5\"\n 650mm x 800mm', '25.6\" x 39.4\"\n 650mm x 1000mm', '25.6\" x 47.2\"\n 650mm x 1200mm'],
+                finishes: [
+                    { name: 'Black Anode', src: 'https://www.cronosdesign.com/i/blackFinish.jpg', type: '' },
+                    { name: 'Silver Anode', src: 'https://www.cronosdesign.com/i/alumFinish.jpg', type: 'Matte' },
+                    { name: 'Powder Coated White RAL 9003', src: 'https://i.pinimg.com/236x/b8/c7/17/b8c7170dde98a2489b381938122d0ba1.jpg', type: '' }
+                ],
+                specs: []
+            }
+        };
+
+        let currentIndex = 0;
+        let gallerySize = 0;
+
+        function goToSlide(idx) {
+            const galleryContainer = document.querySelector('.details-gallery');
+            const dots = document.querySelectorAll('.gallery-dot');
+
+            if (idx < 0) idx = gallerySize - 1;
+            if (idx >= gallerySize) idx = 0;
+
+            currentIndex = idx;
+            const slideWidth = galleryContainer.offsetWidth;
+            galleryContainer.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
+
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+
+        function showProductDetails(productId) {
+            const product = products[productId];
+
+            document.getElementById('details-title').textContent = product.title;
+            document.getElementById('details-description').textContent = product.description;
+
+            // Populate standard sizes
+            const sizesList = document.getElementById('standard-sizes-list');
+            sizesList.innerHTML = '';
+            product.standardSizes.forEach(size => {
+                const div = document.createElement('div');
+                div.className = 'size-item';
+                div.textContent = size;
+                sizesList.appendChild(div);
+            });
+
+            // Populate finishes
+            const finishesGrid = document.querySelector('.finishes-grid');
+            const finishesSection = document.querySelector('.available-finishes-section');
+            finishesGrid.innerHTML = '';
+
+            // Hide finishes section if no finishes available
+            if (product.finishes.length === 0) {
+                finishesSection.style.display = 'none';
+            } else {
+                finishesSection.style.display = 'block';
+                product.finishes.forEach(finish => {
+                    const finishDiv = document.createElement('div');
+                    finishDiv.className = 'finish-option';
+
+                    const finishImg = document.createElement('img');
+                    finishImg.src = finish.src;
+                    finishImg.alt = finish.name;
+                    finishImg.className = 'finish-color';
+
+                    const infoDiv = document.createElement('div');
+                    infoDiv.className = 'finish-info';
+
+                    const nameDiv = document.createElement('div');
+                    nameDiv.className = 'finish-name';
+                    nameDiv.textContent = finish.name;
+
+                    infoDiv.appendChild(nameDiv);
+                    finishDiv.appendChild(finishImg);
+                    finishDiv.appendChild(infoDiv);
+                    finishesGrid.appendChild(finishDiv);
+                });
+            }
+
+            const gallery = document.querySelector('.details-gallery');
+            gallery.innerHTML = '';
+
+            product.gallery.forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = product.title;
+                img.className = 'gallery-img';
+                gallery.appendChild(img);
+            });
+            const dotWrap = document.querySelector('.gallery-dots');
+            dotWrap.innerHTML = '';
+            product.gallery.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotWrap.appendChild(dot);
+            });
+            currentIndex = 0;
+            gallerySize = product.gallery.length;
+            goToSlide(0);
+
+            document.querySelectorAll('.product-card').forEach(card =>
+                card.classList.remove('active')
+            );
+            document.querySelector(`[data-product="${productId}"]`)
+                .classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showProductDetails('round-cosmetic');
+
+            const leftArrow = document.querySelector('.gallery-arrow.left');
+            const rightArrow = document.querySelector('.gallery-arrow.right');
+
+            leftArrow.onclick = () => goToSlide(currentIndex - 1);
+            rightArrow.onclick = () => goToSlide(currentIndex + 1);
+
+            window.addEventListener('resize', () => goToSlide(currentIndex));
+        });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const productId = card.getAttribute('data-product');
+                showProductDetails(productId);
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: black;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Product Strip Styles */
+        .product-strip {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: clamp(10px, 2vw, 20px);
+            gap: clamp(8px, 2vw, 15px);
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+
+        .product-strip::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .product-strip::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .product-strip::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+
+        .product-card {
+            flex: 0 0 auto;
+            width: clamp(120px, 15vw, 180px);
+            text-align: center;
+            cursor: pointer;
+            /* transition: all 0.3s ease; */
+            background: white;
+            padding: clamp(8px, 2vw, 15px);
+            border-radius: 8px;
+            position: relative;
+        }
+
+
+        .product-card.active {
+            border: 2px solid #000000;
+        }
+
+        .product-image {
+            width: 100%;
+            height: clamp(80px, 12vw, 140px);
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: clamp(8px, 1.5vw, 15px);
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            /* transition: transform 0.2s ease; */
+        }
+
+        .product-name {
+            font-size: clamp(0.75rem, 2vw, 0.95rem);
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+            color: #333;
+        }
+
+        /* Product Details */
+        .product-details {
+            background: #f8f9fa;
+            min-height: 60vh;
+        }
+
+        .dropdown-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            padding: clamp(15px, 4vw, 40px);
+            gap: clamp(20px, 5vw, 40px);
+            align-items: start;
+        }
+
+        /* Gallery Wrapper */
+        .gallery-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .details-gallery {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: clamp(250px, 40vw, 500px);
+            object-fit: cover;
+            flex: 0 0 100%;
+            border-radius: 12px;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            font-size: clamp(18px, 3vw, 24px);
+            padding: clamp(8px, 2vw, 12px);
+            width: clamp(36px, 6vw, 44px);
+            height: clamp(36px, 6vw, 44px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-arrow:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-arrow.left {
+            left: clamp(8px, 2vw, 15px);
+        }
+
+        .gallery-arrow.right {
+            right: clamp(8px, 2vw, 15px);
+        }
+
+        .gallery-dots {
+            text-align: center;
+            margin-top: clamp(10px, 2vw, 15px);
+        }
+
+        .gallery-dot {
+            display: inline-block;
+            width: clamp(8px, 1.5vw, 12px);
+            height: clamp(8px, 1.5vw, 12px);
+            margin: 0 clamp(3px, 0.5vw, 6px);
+            border-radius: 50%;
+            background: #c5c5c5;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        /* Details Text */
+        .details-text {
+            flex: 1;
+        }
+
+        .details-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: clamp(15px, 3vw, 20px);
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 8px;
+        }
+
+        .details-description {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            line-height: 1.7;
+            margin-bottom: clamp(20px, 4vw, 25px);
+            color: #444;
+            white-space: pre-line;
+        }
+
+        /* Standard Sizes Section */
+        .standard-sizes-section {
+            margin-bottom: clamp(20px, 4vw, 30px);
+        }
+
+        .standard-sizes-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: clamp(8px, 2vw, 12px);
+            margin-top: clamp(10px, 2vw, 15px);
+        }
+
+        .size-item {
+            background: transparent;
+            padding: clamp(10px, 2.5vw, 12px);
+            text-align: center;
+            font-weight: 500;
+            color: #495057;
+            white-space: pre-line;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        .custom-sizes-note {
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            margin-top: clamp(10px, 2vw, 15px);
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        /* Available Finishes Section */
+        .available-finishes-section {
+            margin-bottom: clamp(20px, 4vw, 30px);
+        }
+
+        .finishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: clamp(12px, 3vw, 15px);
+            margin-top: clamp(15px, 3vw, 20px);
+        }
+
+        .finish-option {
+            text-align: left;
+            padding: clamp(8px, 2vw, 12px);
+            background: transparent;
+        }
+
+        .finish-color {
+            width: clamp(60px, 12vw, 80px);
+            height: clamp(45px, 9vw, 60px);
+            margin-bottom: clamp(8px, 2vw, 10px);
+            border-radius: 6px;
+            border: 2px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            display: block;
+        }
+
+        .finish-name {
+            font-weight: 600;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+
+        /* Mobile Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .dropdown-content {
+                display: block;
+                padding: clamp(15px, 4vw, 25px);
+                gap: 0;
+            }
+
+            .gallery-wrapper {
+                margin-bottom: clamp(25px, 5vw, 35px);
+            }
+
+            .details-text {
+                padding-left: 0;
+            }
+
+            .details-title {
+                font-size: clamp(1.3rem, 5vw, 1.8rem);
+                margin-bottom: clamp(12px, 3vw, 18px);
+            }
+
+            .details-description {
+                font-size: clamp(0.85rem, 3.5vw, 1rem);
+                line-height: 1.6;
+                margin-bottom: clamp(20px, 4vw, 25px);
+            }
+
+            .standard-sizes-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: clamp(8px, 2vw, 10px);
+            }
+
+            .finishes-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: clamp(10px, 2.5vw, 12px);
+            }
+
+            .product-strip {
+                padding: clamp(15px, 3vw, 20px);
+                gap: clamp(10px, 2vw, 15px);
+            }
+
+            .product-card {
+                width: clamp(110px, 18vw, 140px);
+                padding: clamp(8px, 2vw, 12px);
+            }
+
+            .product-image {
+                height: clamp(70px, 14vw, 90px);
+                margin-bottom: clamp(8px, 1.5vw, 10px);
+            }
+
+            .product-name {
+                font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+                line-height: 1.2;
+            }
+
+            .gallery-img {
+                height: clamp(200px, 50vw, 300px);
+            }
+
+            .gallery-arrow {
+                font-size: clamp(16px, 4vw, 20px);
+                width: clamp(32px, 8vw, 40px);
+                height: clamp(32px, 8vw, 40px);
+                padding: clamp(6px, 1.5vw, 10px);
+            }
+
+            .gallery-arrow.left {
+                left: clamp(6px, 2vw, 10px);
+            }
+
+            .gallery-arrow.right {
+                right: clamp(6px, 2vw, 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .standard-sizes-list {
+                grid-template-columns: 1fr;
+            }
+
+            .size-item {
+                padding: clamp(12px, 3vw, 15px);
+                font-size: clamp(0.8rem, 3vw, 0.9rem);
+            }
+
+            .finishes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-strip {
+                padding: clamp(12px, 3vw, 18px);
+            }
+
+            .product-card {
+                width: clamp(100px, 20vw, 130px);
+            }
+
+            .gallery-img {
+                height: clamp(180px, 55vw, 250px);
+            }
+        }
+
+        /* Touch improvements for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .product-card {
+                transform: none;
+                transition: background-color 0.2s ease;
+            }
+
+            .product-card:active {
+                background-color: #f0f0f0;
+            }
+
+            .gallery-arrow {
+                opacity: 0.8;
+            }
+
+            .gallery-arrow:active {
+                opacity: 1;
+                background: rgba(255, 255, 255, 1);
+            }
+        }
+
+        /* Landscape mobile orientation */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .gallery-img {
+                height: clamp(150px, 35vh, 250px);
+            }
+
+            .dropdown-content {
+                padding: clamp(10px, 2vw, 20px);
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 320px) {
+            .product-card {
+                width: 90px;
+                padding: 6px;
+            }
+
+            .product-image {
+                height: 60px;
+            }
+
+            .product-name {
+                font-size: 0.65rem;
+            }
+
+            .details-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

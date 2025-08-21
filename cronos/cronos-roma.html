@@ -1,0 +1,395 @@
+<!--Wide 35mm - Narrow 26mm-->
+<!-- sliding systems h37 wide
+    sliding systems h27 narrow-->
+<div data-url="roma-frame_BigIntro"></div>
+
+<!-- tabs -->
+<div class="wrapperTabsTpl">
+  <div class="tabsTpl tabsTpl-intro">
+
+    <div class="tab" onclick="scrollToElement('#Colors')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          Colors
+        </div>
+      </div>
+    </div>
+    <div class="tab" onclick="scrollToElement('#Options')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          Hardware
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          <a href="/i/romaPdfFile.pdf">Specifications<i class="fa fa-file-pdf-o"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          <a href="https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/">Shop Samples</a>
+        </div>
+      </div>
+    </div>
+    <div class="tab" onclick="scrollToElement('#Configurator')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          <span class="btnTpl btnTpl-bg-cian"><span class=""><i class="fal fa-cog fs-18"></i>Configurator</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contentPage">
+  <style>
+    img.frameColors {
+            width: 70px;
+            height: 70px;
+            text-align: center;
+        }
+
+        .tileLayout {
+            display: grid;
+            grid-column-gap: 15px;
+            grid-row-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+        .tileLayoutI {
+            display: grid;
+            grid-column-gap: 15px;
+            grid-row-gap: 20px;
+            grid-template-columns: repeat(8, minmax(70px, 1fr));
+        }
+
+    .tileCell {
+      padding: 1px;
+      text-align: left;
+    }
+
+    #ho {
+      width: 100%;
+      height: 200px;
+    }
+
+    @media(max-width: 576px) {
+      .tileLayout {
+        grid-template-columns: 1fr;
+      }
+
+      .tileLayoutI {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hidden-phone {
+        display: none;
+      }
+    }
+
+    img.pointer {
+      cursor: pointer;
+      transition: transform .2s;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: left;
+      padding-top: 50px;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      width: 600px;
+      height: auto;
+      background-color: #fff;
+      object-fit: cover;
+
+    }
+
+    #modalImg {
+      width: 1000px;
+      height: 1000px;
+      object-fit: cover
+    }
+
+    h6:hover {
+      color: #0c8593;
+      cursor: pointer;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    #carouselImage {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .previewContainer {
+      display: inline;
+    }
+
+    .previewContainer img {
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+    }
+
+    .imageCarousel {
+      text-align: center;
+    }
+
+    .previewImage {
+      opacity: 0.5;
+    }
+  </style>
+
+  <div id="myModal" class="modal" style="background-color: ffffff; width: 100%; cursor: zoom-out;"
+    onclick="closeModal()">
+    <img id="modalImg" src="" alt="Modal Image" style="object-fit: contain;">
+  </div>
+
+
+  <div class="tileLayout">
+    <div class="tileCell" style="text-align: left;">
+
+      <b>Roma: A narrow frame with a subtle face reveal, creating a slim and stylish aesthetic.</b>
+      <ul>
+        <li>Insert Thickness: 5/32″ (4 mm) thickness options.</li>
+        <li>Customizable Installation: Tailored to exact dimensions and specifications for easy setup.</li>
+        <li>Extensive Insert Variety: Offers a wide assortment of inserts.</li>
+        <li>Maximum Height: 98" (2489mm)</li>
+      </ul>
+        <img data-src="/i/romaDoubleDiagramHorizontalUPD1.png" data-typeimg="3colAside" alt=""
+          style="width: 100%; height: 225px; object-fit: contain;"
+          onclick="showModal('/i/romaDoubleDiagramHorizontal.png')" />
+    </div>
+
+    <div class="tileCell">
+      <div class="imageCarousel">
+        <img src="/i/romaShelfBP1.jpg" id="carouselImage" style="width: 100%; object-fit: contain;">
+        <br>
+        <div class="previewContainer">
+          <img id="image2" class="previewImage" src="/i/romaShelfBP1.jpg" alt="Image 2 Preview"
+            onclick="changeImage('/i/romaShelfBP1.jpg', 'image2')">
+          <img id="image3" class="previewImage" src="/i/Roma-3.jpg" alt="Image 3 Preview"
+            onclick="changeImage('/i/Roma-3.jpg', 'image3')">
+          <img id="image4" class="previewImage" src="/i/Roma-grip-2.jpg" alt="Image 4 Preview"
+            onclick="changeImage('/i/Roma-grip-2.jpg', 'image4')">
+          <img id="image1" class="previewImage" src="/i/romaBlackProfile.jpg" alt="Image 1 Preview"
+            onclick="changeImage('/i/romaBlackProfile.jpg', 'image1')">
+          <img id="image1" class="previewImage" src="/i/romaProfilePic1.jpg" alt="Image 1 Preview"
+            onclick="changeImage('/i/romaProfilePic1.jpg', 'image1')">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h4 class="responsive-small-2" id="Colors">Anode options</h4>
+  <hr>
+
+  <div class="tileLayoutI">
+    <div class="tileCell">
+      <img src="/i/matteBlackProfile.jpg" class="pointer frameColors" onclick="showModal('/i/matteBlackProfile.jpg')" />
+      <h6>Matte<br>Black</h6>
+    </div>
+    <div class="tileCell">
+      <img src="/i/champagneProfile.jpg" class="pointer frameColors" onclick="showModal('/i/champagneProfile.jpg')" />
+      <h6>Gold<br>Champagne</h6>
+    </div>
+    <div class="tileCell"></div>
+    <!-- <div class="tileCell">
+            <img src="/i/woodGrainFrame.png" class="pointer frameColors" onclick="showModal('/i/woodGrainFrame.png')" />
+            <h6>Wood Grain</h6>
+        </div> -->
+    <div class="tileCell"></div>
+    <div class="tileCell"></div>
+    <div class="tileCell"></div>
+    <div class="tileCell"></div>
+  </div>
+
+  <hr>
+  <h4 class="responsive-small-2" id="Colors">Salice Air Hinge</h4>
+  <div class="tileLayout">
+    <div class="tileCell">
+      <p>Salice Air Hinges:
+        Introducing Air, our concealed hinge system known for its sophisticated design, compact size, and outstanding
+        performance. Air is fully adjustable in three directions and works seamlessly with both wood and aluminum framed
+        doors. Whether you have small, lightweight doors or tall, heavy ones, Air ensures a smooth and worry-free
+        operation with just two hinges on the top and bottom of the frame.
+      </p>
+      <img src="/i/romaHingesHorizontal.png" onclick="showModal('/i/romaHingesHorizontal.png')" style="width:100%" />
+    </div>
+    <div class="tileCell">
+      <img src="/i/RomaWithHinges2.png" onclick="showModal('/i/RomaWithHinges2.png')" style="width: 100%" />
+    </div>
+  </div>
+  <hr>
+
+  <h4 class="responsive-small-2" id="Colors">Roma Shelf</h4>
+  <div class="tileLayout">
+    <div class="tileCell">
+      <ul>
+        <li>High-Grade Glass: Our cases feature crystal clear glass that offers maximum visibility and
+          durability. Glass Thickness: 0.15"(4mm).</li>
+        <li>Adjustable Shelves: Customize your display with adjustable shelves to accommodate items of
+          various sizes. Maximum load: 11lb (5kg).</li>
+        <li>Maximum Width: 35.4"(900mm).</li>
+        <li>Maximum Depth: 15.7"(400mm).</li>
+      </ul>
+      <div class="tileLayout" style="width: 100%;">
+        <div class="tileCell">
+          <img style="width: 100%; height: 50px; object-fit: contain;" src="/i/coldColor.png">
+          <h6 style="text-align: center;">Cold</h6>
+        </div>
+        <div class="tileCell">
+          <img style="width: 100%; height: 50px; object-fit: contain;" src="/i/neutralColor.png">
+          <h6 style="text-align: center;">Neutral</h6>
+        </div>
+        <div class="tileCell">
+          <img style="width: 100%; height: 50px; object-fit: contain;" src="/i/warmColor.png">
+          <h6 style="text-align: center;">Warm</h6>
+        </div>
+      </div>
+    </div>
+    <div class="tileCell">
+      <img src="/i/romaShelfBP1.jpg" onclick="showModal('/i/romaShelfBP1.jpg')" style="width:100%;" />
+    </div>
+
+  </div>
+  <style>
+      .responsive-small-2 {
+        font-size: clamp(0.75rem, 1vw, 1.1rem);
+        margin-bottom: 0px;
+    }
+  .collapsible-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .collapsible-header {
+    cursor: pointer;
+  }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
+    border-top: none;
+    padding: 0 10px;
+  }
+
+  .collapsible-content.open {
+    padding: 10px;
+  }
+
+
+  .chevron {
+    float: right;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .chevron.rotate {
+    transform: rotate(90deg);
+  }
+</style>
+  <hr>
+  <h4 class="responsive-small-2" id="Colors">Glass Inserts</h4>
+  <div class="tileLayout">
+
+    <div class="tileCell">
+
+      <ul>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#FrostedGlass">Frosted/Acid-Etched
+            Glass</a>
+        </li>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#ParsolGlass">Parsol/Reflective
+            Glass</a>
+        </li>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#ClearGlass">Clear
+            Glass</a>
+        </li>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#MasterGlass">Textured
+            Glass (Master</a>)
+        </li>
+        <li>
+          <a
+            href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#FrostedAcid-EtchedPaintedGlass">Acid-Etched
+            Glass (Matte</a>)
+        </li>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#PaintedGlass">Painted
+            Glass (Glossy</a>)
+        </li>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#Aluglass">Designer
+            Inserts</a>
+        </li>
+        <li>
+          <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#MirrorGlass'">Mirror
+            Glass</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tileCell">
+      <img src="/i/glassInsertsUpd.png" style="width: 100%; object-fit: cover;" />
+    </div>
+  </div>
+  <hr>
+  <div class="tpl tpl-gotoConstr doors" id="Configurator">
+    <div class="dir">
+      DOOR DESIGNER ONLINE
+    </div>
+    <div class="h1">
+      Customize and Purchase<br>Vivaro Aluminum Frame
+    </div>
+    <div class="intro">
+      You can now design your own door and buy it online using our proprietary interactive online tool.
+      <br />Create your own door to your own specifications.
+    </div>
+    <a href="/en/cabinet-doors/door-designer-online/" class="btnTpl btnTpl-bg-cian"><span class=""><i
+          class="fal fa-cog fs-18"></i>Get Started</span></a>
+  </div>
+
+  <div class="h4">See also</div>
+  <div data-url="aluminium-frame-style_SmallSquares"></div>
+
+  <script>
+    function showModal(imageSrc) {
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+
+    const changeImage = (source, idx) => {
+      document.getElementById('carouselImage').src = source;
+    }
+  </script>
+
+</div>

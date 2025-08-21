@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluminum Frame Cabinet Doors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* Content Sections */
+    .contentPage {
+      width: 100%;
+    }
+
+    .intro-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin: 0 auto 60px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .intro-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      max-width: 350px;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 2px solid #e9ecef;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin: 60px auto 40px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #0e8593;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    .subsection-title {
+      font-size: 1.8rem;
+      color: #333;
+      margin: 50px auto 30px;
+      padding-left: 20px;
+      border-left: 4px solid #0e8593;
+      max-width: 1200px;
+      width: 100%;
+      text-align: left;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin: 0 auto 40px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    .product-card {
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid #e9ecef;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      background: white;
+    }
+
+    .product-card:hover {
+      border-color: #0e8593;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      color: inherit;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      transition: none;
+      background: #fafafa;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    .product-info {
+      padding: 15px 20px 20px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-divider {
+      height: 3px;
+      background: #0e8593;
+      margin: 0;
+      border: none;
+      flex-shrink: 0;
+    }
+
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    /* Insert Grid */
+    .insert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin: 0 auto 60px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    .insert-card {
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid #e9ecef;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+    }
+
+    .insert-card:hover {
+      border-color: #0e8593;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      color: inherit;
+    }
+
+    .insert-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: none;
+      border: 1px solid #e9ecef;
+    }
+
+    .insert-card h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    /* Configurator Section */
+    .configurator-section {
+      color: #333;
+      padding: 80px 40px;
+      text-align: center;
+      border-radius: 8px;
+      margin: 60px auto;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #e9ecef;
+      max-width: 1200px;
+      width: 100%;
+      background: #fafafa;
+    }
+
+    .configurator-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('/i/gallery/bigSizeGallery/temp_3_constr_doors.jpg') center/cover;
+      opacity: 0.05;
+      z-index: 1;
+    }
+
+    .configurator-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .configurator-section .dir {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #0e8593;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .configurator-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .configurator-section .intro {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #666;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: #0e8593;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 12px rgba(14, 133, 147, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #0a6b75;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(14, 133, 147, 0.4);
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+      }
+      .insert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .intro-image img {
+        max-width: 280px;
+        height: 200px;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .subsection-title {
+        font-size: 1.5rem;
+        margin: 30px auto 20px;
+        padding-left: 20px;
+        text-align: left;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .product-card {
+        height: 280px;
+      }
+
+      .product-card img {
+        height: 180px;
+        padding: 15px;
+      }
+
+      .insert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .insert-card {
+        min-height: 200px;
+        padding: 20px;
+      }
+
+      .insert-card img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .product-grid, .insert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 0 10px;
+      }
+
+      .product-card {
+        height: 260px;
+      }
+
+      .product-card img {
+        height: 160px;
+        padding: 10px;
+      }
+
+      .insert-card {
+        min-height: 180px;
+        padding: 15px;
+      }
+
+      .insert-card img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .subsection-title {
+        padding-left: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Utility Classes */
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-4 {
+      margin-bottom: 2rem;
+    }
+
+    .hidden-phone {
+      display: block;
+    }
+
+    @media (max-width: 576px) {
+      .hidden-phone {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div data-url="aluminium-frame-cabinet-doors_BigIntro"></div>
+
+<!-- Navigation Tabs -->
+<div class="wrapperTabsTpl">
+  <div class="tabsTpl tabsTpl-intro">
+    <div class="tab" onclick="scrollToElement('#Styles')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          <i class="far fa-paint-brush"></i> Styles
+        </div>
+      </div>
+    </div>
+    <!-- <div class="tab" onclick="scrollToElement('#Inserts')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          Inserts
+        </div>
+      </div> 
+    </div>-->
+    <div class="tab" onclick='window.location.href="https://www.cronosdesign.com/en/shop/samples/samples-aluminum-profiles/"'>
+      <div class="tab-inner">
+        <div class="tab-txt">
+          Shop Samples
+        </div>
+      </div>
+    </div>
+    <div class="tab" onclick="scrollToElement('#Gallery')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          Gallery
+        </div>
+      </div>
+    </div>
+    <div class="tab" onclick="window.location.href='https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/assembly-instructions/'">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          Assembly<br>Instructions
+        </div>
+      </div>
+    </div>
+    <div class="tab" onclick="scrollToElement('#Configurator')">
+      <div class="tab-inner">
+        <div class="tab-txt">
+          <span class="btnTpl btnTpl-bg-cian"><span class=""><i class="fal fa-cog fs-18"></i>Configurator</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contentPage">
+  <div class="container">
+    
+    <!-- Introduction Section -->
+    <div class="intro-section">
+      <div class="intro-text">
+        <!-- <p>Aluminum frames and aluminum cabinet doors have been well-liked and admired in Europe for a long time. It has been a material of choice for designers and home owners looking for a frame that would easily complement any interior design.</p>
+        <p>Moreover, Aluminum Frame solutions have been consistently gaining fans in the North American market year after year.</p> -->
+        <p>Whether you're drawn to minimalist lines or bold borders, there's an aluminum frame to match your style. Explore our collection and find the perfect frame and finish for your space.</p>
+      </div>
+      <div class="intro-image">
+        <img src="/i/r8iRCK.jpg" alt="Aluminum Frame Example" />
+      </div>
+    </div>
+
+    <!-- Styles Section -->
+    <div id="Styles" class="section-header">
+      <h2>Aluminum Frame Styles</h2>
+    </div>
+
+    <h3 class="subsection-title">Wide Frames</h3>
+    <div class="product-grid">
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/vivaro/" class="product-card">
+        <img src="/i/vivaroProfile.png" alt="Vivaro Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">VIVARO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/palio/" class="product-card">
+        <img src="/i/palioProfile.png" alt="Palio Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">PALIO</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/siena/" class="product-card">
+        <img src="/i/sienaProfile.png" alt="Siena Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">SIENA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/imola/" class="product-card">
+        <img src="/i/imolaProfile.png" alt="Imola Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">IMOLA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/imola-808/" class="product-card">
+        <img src="/i/imola808Profile1.png" alt="Imola 808 Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">IMOLA 808</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/pisa/" class="product-card">
+        <img src="/i/pisaProfile.png" alt="Pisa Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">PISA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/pisa-088/" class="product-card">
+        <img src="/i/pisa088Profile.png" alt="Pisa 088 Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">PISA 088</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/modena/" class="product-card">
+        <img src="/i/modenaProfile.png" alt="Modena Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">MODENA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/modena-007/" class="product-card">
+        <img src="/i/modena007Profile.png" alt="Modena 077 Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">MODENA 077</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/corleone/" class="product-card">
+        <img src="/i/corleoneProfile.png" alt="Corleone Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">CORLEONE</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/corleone-877/" class="product-card">
+        <img src="/i/corleone877Profile.png" alt="Corleone 877 Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">CORLEONE 877</h5>
+        </div>
+      </a>
+    </div>
+
+    <h3 class="subsection-title">Narrow Frames</h3>
+    <div class="product-grid">
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/brw/" class="product-card">
+        <img src="/i/brwProfile.png" alt="BRW Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">BRW</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/verona/" class="product-card">
+        <img src="/i/veronaProfile.png" alt="Verona Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">VERONA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/rocca/" class="product-card">
+        <img src="/i/roccaProfile.png" alt="Rocca Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">ROCCA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/asti-2/" class="product-card">
+        <img src="/i/astiProfile.png" alt="Asti Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">ASTI</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/roma/" class="product-card">
+        <img src="/i/romaProfile.png" alt="Roma Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">ROMA</h5>
+        </div>
+      </a>
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/verona-air/" class="product-card">
+        <img src="/i/veronaAirProfile.png" alt="Verona Air Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">VERONA AIR</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/varna/" class="product-card">
+        <img src="/i/varnaProfile.png" alt="Varna Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">VARNA</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/rimini/" class="product-card">
+        <img src="/i/riminiProfile.png" alt="Rimini Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">RIMINI</h5>
+        </div>
+      </a>
+
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/aluminum-frame-cabinet-doors/divider/" class="product-card">
+        <img src="/i/dividersProfile.png" alt="Dividers Profile" />
+        <hr class="product-divider" />
+        <div class="product-info">
+          <h5 class="product-name">DIVIDERS</h5>
+        </div>
+      </a>
+
+      
+    </div>
+
+    <!-- Inserts Section -->
+    <!-- <div id="Inserts" class="section-header">
+      <h2>Inserts</h2>
+    </div>
+    
+    <div class="insert-grid">
+      <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#FrostedGlass" class="insert-card">
+        <img src="/i/frostedAcidEtched.jpg" alt="Frosted/Acid-Etched Glass" />
+        <h5>Frosted/Acid-Etched Glass</h5>
+      </a>
+     -->
+     <!--  <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#ParsolGlass" class="insert-card">
+       <img src="/i/parsolStopsol.jpg" alt="Parsol/Reflective Glass" />
+       <h5>Parsol/Reflective Glass</h5>
+     </a>
+     
+     <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#ClearGlass" class="insert-card">
+       <img src="/i/clearGlass.jpg" alt="Clear Glass" />
+       <h5>Clear Glass</h5>
+     </a>
+     
+     <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#MasterGlass" class="insert-card">
+       <img src="/i/master.jpg" alt="Textured Glass (Master)" />
+       <h5>Textured Glass (Master)</h5>
+     </a>
+     
+     <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#FrostedAcid-EtchedPaintedGlass" class="insert-card">
+       <img src="/i/frostedPainted.jpg" alt="Acid-Etched Glass (Matte)" />
+       <h5>Acid-Etched Glass (Matte)</h5>
+     </a>
+     
+     <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#PaintedGlass" class="insert-card">
+       <img src="/i/lacobel.jpg" alt="Painted Glass (Glossy)" />
+       <h5>Painted Glass (Glossy)</h5>
+     </a>
+     
+     <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#Aluglass" class="insert-card">
+       <img src="/i/decorative.jpg" alt="Designer Inserts" />
+       <h5>Designer Inserts</h5>
+     </a>
+     
+     <a href="https://www.cronosdesign.com/en/cabinet-doors/accessories/door-inserts/#MirrorGlass" class="insert-card">
+       <img src="/i/mirrorInserts.jpg" alt="Mirror Glass" />
+       <h5>Mirror Glass</h5>
+     </a>
+         </div> -->
+
+    <div id="Gallery"></div>
+    <div data-url="aluminum-frame_BigIncnt"></div>
+
+    <!-- Configurator Section -->
+    <div class="tpl tpl-gotoConstr doors" id="Configurator" data-lazyload="true"
+      data-src_bg="/i/gallery/bigSizeGallery/temp_3_constr_doors.jpg">
+      <div class="dir">
+        DOOR DESIGNER
+      </div>
+      <div class="h1">
+        Customize and Purchase Aluminum Frame Door
+      </div>
+      <div class="intro">
+        You can now design your own door and buy it online using our proprietary interactive online tool.
+        <br />Create your own door to your own specifications.
+      </div>
+      <a href="/en/cabinet-doors/door-designer-online/" class="btnTpl btnTpl-bg-cian"><span class=""><i
+            class="fal fa-cog fs-18"></i>Get Started</span></a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function scrollToElement(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Door Insert Selector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: black;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .product-strip {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .product-card {
+            flex: 0 0 auto;
+            width: 180px;
+            cursor: pointer;
+            text-align: center;
+            transition: border .2s ease;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .product-card.active {
+            border-color: #000;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            background: #f8f9fa;
+            /*border: 1px solid #e9ecef;*/
+        }
+
+        .product-name {
+            font-size: .95rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .product-card.active .product-name {
+            color: #000;
+        }
+
+        .insert-details {
+            margin-top: 40px;
+        }
+
+        .details-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .details-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .details-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .details-desc {
+            font-size: 1.1rem;
+            color: black;
+            margin-bottom: 25px;
+            white-space: pre-line;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            width: 500px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            max-width: 100%;
+        }
+
+        .details-gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+        }
+
+        .gallery-img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            border: 1px solid #e9ecef;
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #eee;
+            color: black;
+            border: none;
+            font-size: 24px;
+            padding: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s ease;
+        }
+
+        .gallery-arrow:hover {
+            background: #ddd;
+        }
+
+        .gallery-arrow.left {
+            left: 10px;
+        }
+
+        .gallery-arrow.right {
+            right: 10px;
+        }
+
+        .gallery-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .gallery-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background: #c5c5c5;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gallery-dot.active {
+            background: #000;
+        }
+
+        .colors-section {
+            margin-top: 40px;
+        }
+
+        .colors-section h3 {
+            font-size: 1.25rem;
+            color: black;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(160px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 100%;
+            justify-content: center;
+        }
+
+        .color-item {
+            text-align: center;
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 160px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .color-label {
+            font-size: .9rem;
+            font-weight: 600;
+            color: black;
+            margin-top: 6px;
+        }
+
+        .shop-samples-btn {
+            background: #000;
+            color: white !important;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .shop-samples-btn:hover {
+            background: #333;
+        }
+
+        @media(max-width:768px) {
+            .details-content {
+                flex-direction: column;
+            }
+
+            .gallery-img {
+                height: 220px;
+            }
+
+            .gallery-wrapper {
+                width: 100%;
+                height: 200px;
+            }
+
+            .color-grid {
+                grid-template-columns: repeat(3, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">Door Insert Types</h1>
+        <div class="product-strip" id="product-strip"></div>
+
+        <div class="insert-details" id="insert-details" style="display:none;">
+            <div class="details-content">
+                <div class="gallery-wrapper">
+                    <button class="gallery-arrow left">&#8592;</button>
+                    <div class="details-gallery"></div>
+                    <button class="gallery-arrow right">&#8594;</button>
+                    <div class="gallery-dots"></div>
+                </div>
+                <div class="details-text">
+                    <h2 id="details-title" class="details-title"></h2>
+                    <p id="details-desc" class="details-desc"></p>
+                    <!-- <a id="shop-samples-btn" class="shop-samples-btn" href="#" target="_blank" style="color: #ffffff;">Shop Samples</a> -->
+                </div>
+            </div>
+
+            <div class="colors-section">
+                <h3>Glass Types</h3>
+                <div class="color-grid" id="color-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const inserts = {
+            frosted: {
+                title: 'Frosted Glass',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1353_4444',
+                desc: `Frosted Glass. Built from 4mm tempered glass, our frosted glass is safety-certified and ensures privacy by filtering light with full visibility. It comes in brown and graphite tints, as well as striped designs.
+
+Lacomat Glass has a matte effect achieved by coating one side of clear glass with a semi-transparent lacquer. It's more dirt and fingerprint-resistant than acid-etched glass, but cannot be tempered.
+
+Graphite/Brown Frosted Glass is crafted using acid-etching and sandblasting techniques for the frosted glass effect, these tinted glass inserts offer both privacy and ample natural light.
+
+Striped Frosted Glass features alternating stripes of Frosted and Clear glass. Not only does it enhance privacy, but it also allows the seamless flow of natural light.`,
+                images: [
+                    'https://www.cronosdesign.com/i/frostedAcidEtched.jpg',
+                    'https://www.cronosdesign.com/i/frostedP3.jpg',
+                    'https://www.cronosdesign.com/i/frostedP2.jpg'
+                ],
+                types: [
+                    { label: 'Frosted', url: 'https://www.cronosdesign.com/i/frostedGPic1.jpg' },
+                    { label: 'Graphite Frosted', url: 'https://www.cronosdesign.com/i/frostedGPic4.jpg' },
+                    { label: 'Brown Frosted', url: 'https://www.cronosdesign.com/i/frostedGPic3.jpg' },
+                    { label: 'Lacomat', url: 'https://www.cronosdesign.com/i/frostedGPic2.jpg' },
+                    { label: 'Striped Frosted', url: 'https://www.cronosdesign.com/i/frostedGPic6.jpg' },
+                    { label: 'Visionsun Frosted', url: 'https://www.cronosdesign.com/i/frostedVisionsun3.jpeg' }
+                ]
+            },
+            parsol: {
+                title: 'Parsol Glass',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1352_4634,1352_4633,1352_4632',
+                desc: `Parsol Glass is a semi-transparent, tinted float glass that adds a warm touch to any space. Available in Graphite, and Brown tones, it’s made from glass that gently absorbs light. Parsol Glass comes in both tempered and non-tempered options to suit a variety of design and safety needs.\n\nPlanibel Dark Grey Glass reduces glare and softens incoming light with its rich, deep grey tint. It offers enhanced privacy, while maintaining visibility from the inside.\n\nMoru Glass, also known as reeded or fluted glass, is a stylish tinted option that adds texture and privacy to any space. Its vertical ridges gently blur what's behind it while still allowing plenty of light through.\n\nStopsol reflective glass features a sleek, mirror-like surface that adds a modern touch to any cabinet door.`,
+                images: [
+                    'https://www.cronosdesign.com/i/parsolStopsol.jpg',
+                    'https://www.cronosdesign.com/i/parsolBrownGlass2.jpg',
+                    'https://www.cronosdesign.com/i/parsolBrownGlass4.jpg'
+                ],
+                types: [
+                    { label: 'Parsol Brown', url: 'https://www.cronosdesign.com/i/parsolBrown1.jpeg' },
+                    { label: 'Parsol Graphite', url: 'https://www.cronosdesign.com/i/parsolGraphite1.jpeg' },
+                    { label: 'Planibel Dark Grey', url: 'https://www.cronosdesign.com/i/planibelDarkgrey1.jpeg' },
+                    { label: 'Moru Reeded Graphite', url: 'https://www.cronosdesign.com/i/muroGraphite.png' },
+                    { label: 'Moru Reeded Bronze', url: 'https://www.cronosdesign.com/i/muroBronze.png' },
+                    { label: 'Stopsol Brown', url: 'https://www.cronosdesign.com/i/stopsolBronze1.jpeg' },
+                    { label: 'Stopsol Gray', url: 'https://www.cronosdesign.com/i/stopsolGraphite1.jpeg' },
+                    { label: 'Stopsol Black (Venus)', url: 'https://www.cronosdesign.com/i/stopsolVenus.png' },
+                ]
+            },
+            clear: {
+                title: 'Clear Glass',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1352_4440',
+                desc: `Clear glass allows natural light to flow freely, creating bright, open spaces with excellent visibility. Its transparency makes it ideal for showcasing interiors, enhancing sightlines, and giving any room a clean, airy feel.\n\nOpti-White is an ultra-clear glass with minimal color distortion. Unlike standard clear glass, it doesn’t have the greenish tint. It is perfect for applications where a true neutral tone is important, such as exposed edges, or display cases.`,
+                images: [
+                    'https://www.cronosdesign.com/i/clearGlass.jpg',
+                    'https://www.cronosdesign.com/i/clearInsertPicture1.png'
+                ],
+                types: [
+                    { label: 'Clear', url: 'https://www.cronosdesign.com/i/clearGlass1.jpeg' },
+                    { label: 'Optiwhite Low Iron', url: 'https://www.cronosdesign.com/i/optiwhiteGlass1.jpeg' }
+                ]
+            },
+            textured: {
+                title: 'Textured Glass',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1353_4450',
+                desc: `Textured glass adds style and privacy with patterns you can see, and sometimes feel. Some types have a raised surface you can touch, while others stay smooth with the texture built right into the glass. For a more customized look, the back can be painted to create a completely opaque finish in any RAL color you choose.`,
+                images: [
+                    'https://www.cronosdesign.com/i/masterFrame1.jpg',
+                    'https://www.cronosdesign.com/i/masterFrame3.jpg'
+                ],
+                types: [
+                    { label: 'Master Carre', url: 'https://www.cronosdesign.com/i/masterCarre3.jpeg' },
+                    { label: 'Master Lens', url: 'https://www.cronosdesign.com/i/masterLens3.jpeg' },
+                    { label: 'Master Ligne', url: 'https://www.cronosdesign.com/i/masterLigne3.jpeg' },
+                    { label: 'Master Point', url: 'https://www.cronosdesign.com/i/masterPoint5.jpeg' },
+                    { label: 'Master Shine', url: 'https://www.cronosdesign.com/i/masterShine3.jpeg' },
+                    { label: 'Master Soft', url: 'https://www.cronosdesign.com/i/masterSoft3.jpeg' },
+                    { label: 'Master Flex', url: 'https://www.cronosdesign.com/i/masterFlex3.jpeg' },
+                    { label: 'Reeded', url: 'https://www.cronosdesign.com/i/reededGlass3.jpeg' },
+                    { label: 'Visionsun', url: 'https://www.cronosdesign.com/i/visionSun3.jpeg' },
+                    { label: 'Master Screen', url: 'https://www.cronosdesign.com/i/masterKrizet3.jpeg' },
+                    { label: 'Master Ray', url: 'https://www.cronosdesign.com/i/masterRay3.jpeg' },
+                    { label: 'Master Krizet', url: 'https://www.cronosdesign.com/i/masterScreen4.jpeg' },
+                ]
+            },
+            matte: {
+                title: 'Matelac Painted Glass (Matte)',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1352_4437',
+                desc: `Matelac Glass is a sleek glass with a smooth, matte finish. One side is painted, while the other is acid-etched, giving it a soft look that diffuses light. It’s perfect for adding a sophisticated touch to cabinets, wall panels, and furniture. Unlike high-gloss options, Matelac offers a non-reflective surface.`,
+                images: [
+                    'https://www.cronosdesign.com/i/matelacInsertPicture11.jpg',
+                    'https://www.cronosdesign.com/i/matelacInsertPicture21.jpg'
+                ],
+                types: [
+                    { label: 'Matelac Pure White 9003', url: 'https://www.cronosdesign.com/i/matelacPureWhite9003.jpeg' },
+                    { label: 'Matelac Classic Black 9005', url: 'https://www.cronosdesign.com/i/matelacBlackClassic9005.jpeg' },
+                    { label: 'Matelac Brown Mirror', url: 'https://www.cronosdesign.com/i/matelacBronzeMirror.jpeg' },
+                    { label: 'Matelac Graphite Mirror', url: 'https://www.cronosdesign.com/i/matelacGraphiteMirror.jpeg' },
+                ]
+            },
+            painted: {
+                title: 'Lacobel Painted Glass (Glossy)',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1352_4408',
+                desc: `Lacobel Glass is clear float glass coated with high-quality paint on one side, giving it a sleek, glossy finish. Available in various colors, including custom RAL options, it’s perfect for bold, modern designs.`,
+                images: [
+                    'https://www.cronosdesign.com/i/lacobelFrontPicture11.jpg',
+                    'https://www.cronosdesign.com/i/lacobelFrontPicture21.jpg'
+                ],
+                types: [
+                    { label: 'Lacobel Pure White 9003', url: 'https://www.cronosdesign.com/i/pureWhite9003.jpeg' },
+                    { label: 'Lacobel Soft White 9010', url: 'https://www.cronosdesign.com/i/softWhite9010.jpeg' },
+                    { label: 'Lacobel Pearl White 1013', url: 'https://www.cronosdesign.com/i/pearlWhite1013.jpeg' },
+                    { label: 'Lacobel Light Beige 1015', url: 'https://www.cronosdesign.com/i/lightBeige1015.jpeg' },
+                    { label: 'Lacobel Light Brown 1236', url: 'https://www.cronosdesign.com/i/lightBrown1236.jpeg' },
+                    { label: 'Lacobel Classic Gray 7035', url: 'https://www.cronosdesign.com/i/classicGrey7035.jpeg' },
+                    { label: 'Lacobel Gray Metal 9006', url: 'https://www.cronosdesign.com/i/metalGrey9006.jpeg' },
+                    { label: 'Lacobel Aluminum Rich 9007', url: 'https://www.cronosdesign.com/i/aluminumRich9007.jpeg' },
+                    { label: 'Lacobel Brown Metal 0627', url: 'https://www.cronosdesign.com/i/darkBrownMetal0627.jpeg' },
+                    { label: 'Lacobel Classic Black 9005', url: 'https://www.cronosdesign.com/i/classicBlack9005.jpeg' },
+                    { label: 'Lacobel Black Starlight 0337', url: 'https://www.cronosdesign.com/i/blackStarlight0337.png' },
+                    { label: 'Lacobel Luminous Red 1586', url: 'https://www.cronosdesign.com/i/luminousRed1586.png' }
+                ]
+            },
+            mesh: {
+                title: 'Mesh Insert',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/',
+                desc: `Mesh has emerged as a fundamental element in modern design, providing a distinctive fusion of practicality and visual appeal. Its intricate pattern fosters a sense of openness by leaving gaps between the threads, resulting in a meshed or net-like aesthetic. Durability: Wire mesh stands strong against regular wear and tear, enduring heavy use with ease. Aesthetic Appeal: The geometric patterns created by mesh can add visual interest and texture to designs, enhancing their appeal. Lightweight: Its lightweight yet durable nature makes it easy to handle and install, reducing labor costs and project timelines. Customization: Unlock the possibility of painting the mesh in any color from the RAL palette.`,
+                images: [
+                    'https://www.cronosdesign.com/i/meshInsertPicture1.jpg',
+                    'https://www.cronosdesign.com/i/meshInsertPicture2.png'
+                ],
+                types: [
+                    { label: 'Black Metal Mesh', url: 'https://www.cronosdesign.com/i/gallery/4208.jpg' },
+                    { label: 'Gold Metal Mesh', url: 'https://www.cronosdesign.com/i/gallery/4207.jpg' }
+                ]
+            },
+            
+            mirror: {
+                title: 'Mirror Glass',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/?Texts=1352_4442',
+                desc: `Mirror Glass adds depth and brightness, making spaces appear larger. Often used for decorative inserts and accent panels.`,
+                images: [
+                    'https://www.cronosdesign.com/i/mirrorInsert2.jpg',
+                    'https://www.cronosdesign.com/i/mirrorInsert1.jpg'
+                ],
+                types: [
+                    { label: 'Brown Mirror', url: 'https://www.cronosdesign.com/i/mirrorBrown1.jpeg' },
+                    { label: 'Graphite Mirror', url: 'https://www.cronosdesign.com/i/mirrorGraphite1.jpeg' },
+                    { label: 'Silver Mirror', url: 'https://www.cronosdesign.com/i/mirrorSilver1.jpg' },
+                    { label: 'Antique Mirror', url: 'https://www.cronosdesign.com/i/mirrorAntique1.jpeg' },
+                ]
+            },
+            
+            designer: {
+                title: 'Designer Glass',
+                shopLink: 'https://www.cronosdesign.com/en/shop/samples/glass-samples/',
+                desc: `Designer Glass encompasses specialty patterns, prints, or treatments for a unique and artistic appearance. Perfect for accent doors and custom cabinetry.`,
+                images: [
+                    'https://www.cronosdesign.com/i/decorativeFrontImage1.jpg',
+                    'https://www.cronosdesign.com/i/decorativeFrontImage2.jpg'
+                ],
+                types: [
+                    { label: 'Glamour', url: 'https://www.cronosdesign.com/i/gallery/4216.jpg' },
+                    { label: 'Urban', url: 'https://www.cronosdesign.com/i/gallery/4217.jpg' },
+                    { label: 'Vintage', url: 'https://www.cronosdesign.com/i/gallery/4218.jpg' },
+                    { label: 'Casual', url: 'https://www.cronosdesign.com/i/gallery/4220.jpg' },
+                    { label: 'Soft 9005', url: 'https://www.cronosdesign.com/i/gallery/4221.jpg' },
+                    { label: 'Soft 9003', url: 'https://www.cronosdesign.com/i/gallery/4222.jpg' },
+                    { label: 'Brushed Aluminum', url: 'https://www.cronosdesign.com/i/gallery/4223.jpg' },
+                ]
+            },
+        };
+
+        let currentIndex = 0;
+        let gallerySize = 0;
+
+        function goToSlide(idx) {
+            const galleryContainer = document.querySelector('.details-gallery');
+            const dots = document.querySelectorAll('.gallery-dot');
+            if (idx < 0) idx = gallerySize - 1;
+            if (idx >= gallerySize) idx = 0;
+            currentIndex = idx;
+            const slideWidth = galleryContainer.offsetWidth;
+            galleryContainer.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        }
+
+        function selectInsert(key) {
+            const data = inserts[key];
+            document.getElementById('insert-details').style.display = 'block';
+            document.getElementById('details-title').textContent = data.title;
+            document.getElementById('details-desc').textContent = data.desc;
+            
+            // Update shop samples button
+            // const shopBtn = document.getElementById('shop-samples-btn');
+            // shopBtn.href = data.shopLink;
+
+            // --- Gallery ---
+            const gallery = document.querySelector('.details-gallery');
+            gallery.innerHTML = '';
+            (data.images || []).forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = data.title;
+                img.className = 'gallery-img';
+                gallery.appendChild(img);
+            });
+            // Dots
+            const dotWrap = document.querySelector('.gallery-dots');
+            dotWrap.innerHTML = '';
+            (data.images || []).forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotWrap.appendChild(dot);
+            });
+            currentIndex = 0;
+            gallerySize = (data.images || []).length;
+            goToSlide(0);
+
+            // --- Glass Types Grid ---
+            const grid = document.getElementById('color-grid');
+            grid.innerHTML = '';
+            (data.types || []).forEach(type => {
+                const item = document.createElement('div');
+                item.className = 'color-item';
+                
+                const img = document.createElement('div');
+                img.className = 'color-swatch';
+                img.style.backgroundImage = `url('${type.url}')`;
+                // Add zoom on click
+                img.addEventListener('click', () => {
+                    const overlay = document.createElement('div');
+                    overlay.style.position = 'fixed';
+                    overlay.style.top = 0;
+                    overlay.style.left = 0;
+                    overlay.style.width = '100vw';
+                    overlay.style.height = '100vh';
+                    overlay.style.background = 'rgba(0,0,0,0.8)';
+                    overlay.style.display = 'flex';
+                    overlay.style.alignItems = 'center';
+                    overlay.style.justifyContent = 'center';
+                    overlay.style.zIndex = 9999;
+
+                    const zoomed = document.createElement('img');
+                    zoomed.src = type.url;
+                    zoomed.style.maxWidth = '90%';
+                    zoomed.style.maxHeight = '90%';
+                    zoomed.style.borderRadius = '8px';
+                    zoomed.style.boxShadow = '0 0 20px rgba(0,0,0,0.3)';
+
+                    overlay.appendChild(zoomed);
+                    document.body.appendChild(overlay);
+
+                    overlay.addEventListener('click', () => overlay.remove());
+                });
+                
+                const lbl = document.createElement('div');
+                lbl.className = 'color-label';
+                lbl.textContent = type.label;
+                
+                item.appendChild(img);
+                item.appendChild(lbl);
+                grid.appendChild(item);
+            });
+        }
+
+        // Init
+        const strip = document.getElementById('product-strip');
+        Object.entries(inserts).forEach(([key, val]) => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.setAttribute('data-insert', key);
+
+            const img = document.createElement('img');
+            img.src = val.images[0];
+            img.alt = val.title;
+            img.className = 'product-image';
+
+            const name = document.createElement('p');
+            name.className = 'product-name';
+            name.textContent = val.title;
+
+            card.appendChild(img);
+            card.appendChild(name);
+            strip.appendChild(card);
+
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.product-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                selectInsert(key);
+            });
+        });
+
+        // Gallery arrows event listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select first insert by default
+            const firstKey = Object.keys(inserts)[0];
+            document.querySelector(`[data-insert="${firstKey}"]`).classList.add('active');
+            selectInsert(firstKey);
+
+            const leftArrow = document.querySelector('.gallery-arrow.left');
+            const rightArrow = document.querySelector('.gallery-arrow.right');
+            leftArrow.addEventListener('click', () => goToSlide(currentIndex - 1));
+            rightArrow.addEventListener('click', () => goToSlide(currentIndex + 1));
+            window.addEventListener('resize', () => goToSlide(currentIndex));
+        });
+    </script>
+</body>
+
+</html>

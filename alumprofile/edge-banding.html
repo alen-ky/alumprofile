@@ -4,36 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In-Out Drive Sliding Doors - Alumprofile</title>
+    <title>Aluminum Edge Bandings</title>
 </head>
 
 <body>
     <div class="container">
         <div class="product-strip">
-            <div class="product-card" data-product="quadro">
-                <img src="https://www.cronosdesign.com/i/inOutDriveQ1.jpg" alt="Quadro" class="product-image">
-                <p class="product-name">Quadro</p>
+            <div class="product-card" data-product="brw-edge-banding">
+                <img src="https://www.cronosdesign.com/i.ashx?i=/i/img_7207-768x538.jpg&w=970" alt="BRW Edge Banding"
+                    class="product-image">
+                <p class="product-name">BRW</p>
             </div>
 
-            <div class="product-card" data-product="plinto">
-                <img src="https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg" alt="Plinto" class="product-image">
-                <p class="product-name">Plinto</p>
+            <div class="product-card" data-product="s-011">
+                <img src="https://aluminumsys.com/wp-content/uploads/2023/07/s011Alen1.jpg" alt="S-011"
+                    class="product-image">
+                <p class="product-name">S-011</p>
             </div>
 
-            <div class="product-card" data-product="easy">
-                <img src="https://www.cronosdesign.com/i/inOutDriveWood1.jpg"
-                    alt="Easy" class="product-image">
-                <p class="product-name">Easy</p>
+            <div class="product-card" data-product="s-012">
+                <img src="https://www.cronosdesign.com/i.ashx?i=/i/s012Alen.jpg&w=1244" alt="S-012"
+                    class="product-image">
+                <p class="product-name">S-012</p>
             </div>
 
-            <div class="product-card" data-product="wood">
-                <img src="https://www.cronosdesign.com/i/inOutDriveWood2.jpg" alt="Wood" class="product-image">
-                <p class="product-name">Wood</p>
-            </div>
-
-            <div class="product-card" data-product="duo">
-                <img src="https://www.cronosdesign.com/i/slidingDoorsDuoDrive3.jpg" alt="Duo" class="product-image">
-                <p class="product-name">Duo</p>
+            <div class="product-card" data-product="s-014">
+                <img src="https://www.cronosdesign.com/i/s014Alen.jpg" alt="S-014" class="product-image">
+                <p class="product-name">S-014</p>
             </div>
         </div>
 
@@ -48,10 +45,6 @@
                 <div class="details-text">
                     <h2 class="details-title" id="details-title"></h2>
                     <div class="details-description" id="details-description"></div>
-                    <div class="details-diagram" id="details-diagram">
-                        <img src="" alt="Product Diagram" class="diagram-img">
-                    </div>
-                    <ul class="details-specs" id="details-specs-list"></ul>
                 </div>
             </div>
         </div>
@@ -59,68 +52,120 @@
 
     <script>
         const products = {
-            'quadro': {
-                title: 'Quadro',
+            'brw-edge-banding': {
+                title: 'BRW Edge Banding',
+                image: 'https://www.cronosdesign.com/i.ashx?i=/i/img_7207-768x538.jpg&w=970',
                 gallery: [
-                    'https://www.cronosdesign.com/i/inOutDriveQ1.jpg',
-                    'https://www.cronosdesign.com/i/inOutDriveQ2.jpg',
-                    'https://static.tildacdn.com/tild3261-6339-4631-b436-333065613332/quadro.png',
-                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                    'https://www.cronosdesign.com/i.ashx?i=/i/img_7207-768x538.jpg&w=970',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/brw-nabijany-jpg-male.jpg&w=970'
                 ],
-                description: 'Sliding doors are now conduits of style and connectivity. Say goodbye to bulky swinging doors that \
-                gobble space. Our sliding doors effortlessly slide, gifting you more room to breathe and dream.',
-                specs: [],
-                diagram: 'https://www.cronosdesign.com/i/quadro_plinto_slid.png'
+                description: `
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+      <div style="flex: 1; min-width: 280px;">
+        <p>Aluminum edge banding solution for wood-like cabinetry applications.</p>
+        <p><strong>Price Per Bar:</strong></p>
+        <ul>
+            <li>Natural Aluminum 94": $26.56</li>
+          <li>Matte Gold 88": $87.21</li>
+          <li>Matte Black 88": $68.70</li>
+          <li>Ships in 24 hours.</li>
+        </ul>
+      </div>
+      <div style="flex: 1; min-width: 280px;">
+        <img src="https://www.cronosdesign.com/i.ashx?i=/i/brw-profile-sch.png&amp;w=1244" alt="BRW Profile Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+      </div>
+    </div>
+  `,
+                specs: [
+                    'Cabinet heights from 18 7/8" to 42"',
+                    'Cabinet widths up to 72"',
+                    'Bi-fold lift mechanism',
+                    'BLUMOTION soft close included',
+                    'Suitable for wood and aluminum doors'
+                ]
             },
-            'plinto': {
-                title: 'Plinto',
+            's-011': {
+                title: 'S-011',
                 gallery: [
-                    'https://static.tildacdn.com/tild3535-3762-4834-b064-356134373361/quadro2.png',
-                    'https://static.tildacdn.com/tild6165-6238-4438-b038-393536336165/plinto.png',
-                    'https://www.cronosdesign.com/i/slidingDoorsPlintoDrive3.jpg',
-                    'https://www.cronosdesign.com/i/inOutDriveQ4.jpg'
+                    'https://aluminumsys.com/wp-content/uploads/2023/07/s011Alen1.jpg',
+                    'https://aluminumsys.com/wp-content/uploads/2023/07/s011Alen.jpg'
                 ],
-                description: 'Sliding doors are now conduits of style and connectivity. Say goodbye to bulky swinging doors that \
-                gobble space. Our sliding doors effortlessly slide, gifting you more room to breathe and dream.',
-                specs: [],
-                diagram: 'https://www.cronosdesign.com/i/quadro_plinto_slid.png'
+                description: `
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+    <div style="flex: 1; min-width: 280px;">
+      <p>Anodizing: Natural Aluminum</p>
+      <p>Length: 6.5 Ft</p>
+      <p><strong>Price per bar: $36.34</strong></p>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <img src="https://www.cronosdesign.com/i.ashx?i=/i/s011Diagram1.jpg&amp;w=1244" alt="S-011 Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+    </div>
+  </div>
+`,
+                specs: [
+                    'Cabinet Heights from 10" to 24"',
+                    'Cabinet Widths from up to 72"',
+                    'Integrated opening angle stop',
+                    'Compact design for small cabinets',
+                    'Strong enough for larger cabinets'
+                ]
             },
-            'easy': {
-                title: 'Easy',
+            's-012': {
+                title: 'S-012',
                 gallery: [
-                    'https://www.cronosdesign.com/i/aventosHF.jpg',
-                    'https://www.cronosdesign.com/i/aventosHF.jpg',
-                    'https://www.cronosdesign.com/i/aventosHF.jpg'
+                    'https://www.cronosdesign.com/i.ashx?i=/i/s012Alen1.jpg&w=1244',
+                    'https://www.cronosdesign.com/i.ashx?i=/i/s012Alen.jpg&w=1244'
                 ],
-                description: 'AVENTOS HS provides comfort of motion that is sure to impress. Even heavy doors can be opened effortlessly, and thanks to BLUMOTION, come to a gentle halt. The variable stop ensures that the door always remains in the desired position, so the handle will always be within reach. AVENTOS HS lift systems open doors up and over the top of the cabinet.',
-                specs: [],
-                diagram: 'https://www.cronosdesign.com/i/easy_diagram.png'
+                description: `
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+    <div style="flex: 1; min-width: 280px;">
+      <p>Anodizing: Natural Aluminum</p>
+      <p>Length: 6.5 Ft</p>
+      <p><strong>Price per bar: $36.00</strong></p>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <img src="https://www.cronosdesign.com/i.ashx?i=/i/S-012.png&amp;w=1244" alt="S-012 Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+    </div>
+  </div>
+`,
+                specs: [
+                    'Cabinet heights from 13 3/4" to 31 1/2"',
+                    'Cabinet widths up to 72"',
+                    'Up and over opening mechanism',
+                    'Variable stop feature',
+                    'BLUMOTION soft close action'
+                ]
             },
-            'wood': {
-                title: 'Wood',
+            's-014': {
+                title: 'S-014',
                 gallery: [
-                    'https://www.cronosdesign.com/i/inOutDriveWood2.jpg',
-                    'https://www.cronosdesign.com/i/inOutDriveWood1.jpg',
-                    'https://www.cronosdesign.com/i/aventosHF.jpg'
+                    'https://www.cronosdesign.com/i/s014Alen.jpg',
+                    'https://www.cronosdesign.com/i/s014Alen1.jpg'
                 ],
-                description: 'With AVENTOS HL, the one-piece door front lifts up vertically and provides unhindered access to the interior. This lift system is the ideal solution for an appliance garage or wall cabinet. The door is easy to open and can be stopped at any desired position. It closes silently and effortlessly thanks to BLUMOTION.',
-                specs: []
-            },
-            'duo': {
-                title: 'Duo',
-                gallery: [
-                    'https://www.cronosdesign.com/i/slidingDoorsDuoDrive3.jpg',
-                    'https://www.cronosdesign.com/i/slidingDoorsDuoFly3.jpg'
-                ],
-                description: 'Sliding doors are now conduits of style and connectivity. Say goodbye to bulky swinging doors that \
-                gobble space. Our sliding doors effortlessly slide, gifting you more room to breathe and dream.',
-                specs: [],
-                diagram: 'https://www.cronosdesign.com/i/duoDiagramInOutDrive.jpg'
+                description: `
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+    <div style="flex: 1; min-width: 280px;">
+      <p>Anodizing: Natural Aluminum</p>
+      <p>Length: 6.5 Ft</p>
+      <p><strong>Price per bar: $36.33</strong></p>
+    </div>
+    <div style="flex: 1; min-width: 280px;">
+      <img src="https://www.cronosdesign.com/i.ashx?i=/i/S-014.png&amp;w=1244" alt="S-014 Diagram" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+    </div>
+  </div>
+`,
+                specs: [
+                    'Cabinet heights from 11 13/16" to 22 13/16"',
+                    'Cabinet widths up to 72"',
+                    'Vertical lift mechanism',
+                    'One-piece door front',
+                    'Ideal for appliance garages'
+                ]
             }
         };
 
         let currentIndex = 0;
-        let gallerySize  = 0;
+        let gallerySize = 0;
 
         function goToSlide(idx) {
             const galleryContainer = document.querySelector('.details-gallery');
@@ -140,17 +185,7 @@
             const product = products[productId];
 
             document.getElementById('details-title').textContent = product.title;
-            document.getElementById('details-description').textContent = product.description;
-
-            const specsList = document.getElementById('details-specs-list');
-            specsList.innerHTML = '';
-            product.specs.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                specsList.appendChild(li);
-            });
-
-            document.getElementById('details-diagram').querySelector('img').src = product.diagram || '';
+            document.getElementById('details-description').innerHTML = product.description;
 
             const gallery = document.querySelector('.details-gallery');
             gallery.innerHTML = '';
@@ -172,7 +207,7 @@
                 dotWrap.appendChild(dot);
             });
             currentIndex = 0;
-            gallerySize  = product.gallery.length;
+            gallerySize = product.gallery.length;
             goToSlide(0);
 
             document.querySelectorAll('.product-card').forEach(card =>
@@ -183,9 +218,13 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            showProductDetails('quadro');
+            const firstProductCard = document.querySelector('.product-card');
+            if (firstProductCard) {
+                const firstProductId = firstProductCard.getAttribute('data-product');
+                showProductDetails(firstProductId);
+            }
 
-            const leftArrow  = document.querySelector('.gallery-arrow.left');
+            const leftArrow = document.querySelector('.gallery-arrow.left');
             const rightArrow = document.querySelector('.gallery-arrow.right');
             const galleryContainer = document.querySelector('.details-gallery');
 
@@ -247,7 +286,7 @@
             display: flex;
             background: white;
             border-bottom: 1px solid #e9ecef;
-            padding: 10px 20px;
+            padding: 30px 20px;
             gap: 15px;
             overflow-x: auto;
             overflow-y: hidden;
@@ -274,7 +313,7 @@
 
         .product-card {
             flex: 0 0 auto;
-            width: 180px;
+            width: 160px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -289,7 +328,7 @@
 
         .product-image {
             width: 100%;
-            height: 140px;
+            height: 100px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -298,11 +337,11 @@
         }
 
         .product-name {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: black;
-            margin: 0;
-            line-height: 1.3;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            margin-bottom: 0;
+            white-space: normal;
+            word-wrap: break-word;
         }
 
         .product-card.active .product-name {
@@ -364,7 +403,7 @@
             justify-content: center;
             cursor: pointer;
             z-index: 1;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             transition: background 0.2s ease;
         }
 
@@ -407,7 +446,6 @@
 
         .details-title {
             font-size: 2rem;
-            color: black;
             margin-bottom: 20px;
             font-weight: 600;
         }
@@ -415,17 +453,22 @@
         .details-description {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: black;
             margin-bottom: 25px;
         }
 
+        .details-description strong {
+            display: block;
+            margin-top: 20px;
+        }
+
         .details-specs {
+            background: white;
             padding: 20px;
             border-radius: 8px;
+            border-left: 4px solid #000000;
         }
 
         .details-specs h4 {
-            color: black;
             margin-bottom: 15px;
             font-size: 1.2rem;
         }
@@ -437,9 +480,16 @@
 
         .details-specs li {
             padding: 5px 0;
-            color: black;
             position: relative;
-            padding-left: 10px;
+            padding-left: 20px;
+        }
+
+        .details-specs li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         .close-btn {
@@ -469,7 +519,7 @@
 
             .product-card {
                 width: 140px;
-                padding: 12px;
+                padding: 12px 10px;
             }
 
             .product-image {
@@ -500,18 +550,91 @@
                 font-size: 2rem;
             }
         }
-
-                .details-diagram {
-            margin-bottom: 25px;
-        }
-
-        .diagram-img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-        }
     </style>
+
+/* Zoom Modal for Diagrams */
+.zoom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  transition: opacity 0.2s;
+}
+.zoom-modal.active {
+  display: flex;
+  opacity: 1;
+}
+.zoom-modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.5);
+  background: white;
+}
+.zoomable-diagram {
+  cursor: zoom-in !important;
+  transition: box-shadow 0.2s;
+}
+.zoomable-diagram:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
 </body>
+<div id="zoom-modal" class="zoom-modal" onclick="closeZoomModal(event)">
+  <img id="zoom-modal-img" class="zoom-modal-img" src="" alt="Zoomed Diagram" />
+</div>
+<script>
+// Make diagrams zoomable in product details
+function enableDiagramZoom() {
+  document.querySelectorAll('.details-description img').forEach(img => {
+    img.classList.add('zoomable-diagram');
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      openZoomModal(this.src, this.alt);
+    });
+  });
+}
+
+function openZoomModal(src, alt) {
+  const modal = document.getElementById('zoom-modal');
+  const modalImg = document.getElementById('zoom-modal-img');
+  modalImg.src = src;
+  modalImg.alt = alt || '';
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeZoomModal(e) {
+  // Only close if background (not image) is clicked
+  if (!e || e.target === document.getElementById('zoom-modal')) {
+    document.getElementById('zoom-modal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// Close modal with ESC key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeZoomModal();
+  }
+});
+
+// Re-enable zoom after product changes
+const origShowProductDetails = window.showProductDetails;
+window.showProductDetails = function() {
+  origShowProductDetails.apply(this, arguments);
+  setTimeout(enableDiagramZoom, 0);
+};
+// Initial enable after DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(enableDiagramZoom, 0);
+});
+</script>
 
 </html>
